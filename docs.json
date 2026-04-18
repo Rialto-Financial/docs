@@ -30,8 +30,7 @@
           {
             "group": "Getting started",
             "pages": [
-              "index",
-              "how-byron-works",
+              "getting-started/welcome-page",
               "getting-started/account-setup",
               "getting-started/first-document",
               "getting-started/adding-team",
@@ -128,9 +127,7 @@
           {
             "group": "Getting started",
             "pages": [
-              "index",
-              "getting_started",
-              "how-byron-works"
+              "getting_started"
             ]
           }
         ]
