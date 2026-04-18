@@ -1,122 +1,39 @@
 ---
 title: "How Byron works"
-description: "Byron processes your tax documents in four steps: upload, extract, review, and export. Here's what happens at each stage."
+description: "Byron is built around the reality of tax document processing at a firm: most forms are predictable, but some are messy — and your team needs both speed and a reliable audit trail. Here's how Byron delivers both."
 ---
 
-# How Byron works
+## Purpose-built for tax forms
 
-Byron replaces manual data entry for tax document processing. Instead of keying in W-2s, 1099s, and K-1s by hand, you upload the source documents and Byron extracts the data for you — with 98–99% accuracy. You review what Byron found, make any corrections, and export directly into your tax preparation software.
+Byron's AI is trained specifically on tax documents. It understands the structure of W-2s, 1099s, K-1s, Schedule Cs, and composite statements, including where data lives across face sheets, footnotes, and supplemental schedules. That's what gets Byron to 98–99% accuracy on fields that generic tools routinely miss.
 
-The entire process follows four steps.
+For K-1s in particular, Byron doesn't stop at the face sheet. It reads the footnotes and pulls out detailed breakouts — Section 199A by activity, state K-1 detail, K-3 data — the kind of information that typically takes a preparer 15–30 minutes to transcribe by hand.
 
-## Step 1: Upload your documents
+## Confidence scoring on every field
 
-Drop your client's tax documents into Byron. You can upload a single document, drag and drop an entire folder, or upload multiple files in bulk.
+Byron doesn't just extract data — it scores how confident it is in every value it reads.
 
-Byron currently processes **PDF files**. You can upload scanned documents, digital PDFs, and composite statements. There's no need to sort or label anything before uploading — Byron automatically identifies the document type (W-2, 1099-INT, K-1, etc.) and routes it to the right place.
+- **High confidence** fields are marked as ready. Byron is sure about these, and you can trust them at a glance.
+- **Review** fields are surfaced for you to check. These are values Byron isn't certain about, usually because the source document is unclear, unusual, or poorly scanned.
 
-<Note>
-Byron accepts folders but not zip files. If your documents arrive as a zip, extract them first, then upload the folder.
-</Note>
+This means you don't need to re-verify every number. You focus your attention only where it's actually needed, and move through high-confidence data in seconds.
 
-## Step 2: Byron extracts the data
+## Human in the loop
 
-Once uploaded, Byron's AI reads each document and extracts the relevant data fields. This typically takes under a minute per document. For a K-1 with footnotes and state schedules, it may take slightly longer.
+Byron is designed to keep your team in control. Every extracted value can be reviewed, edited, approved, or rejected. **Anchors** show exactly where each number came from on the source PDF, so verification is fast — one click and you're looking at the spot Byron pulled it from.
 
-Here's what Byron does during extraction:
+Every action is tracked in a full audit log: who approved what, who corrected what, and when. For firms, that means seasonal preparers, senior reviewers, and partners can all work in the same system with a clear record of who did what.
 
-- **Identifies the document type** — W-2, 1099, K-1, Schedule C, or brokerage statement
-- **Reads every field** — from simple boxes like wages and interest income to complex breakouts like Section 199A by activity
-- **Pulls from footnotes** — for K-1s, Byron doesn't just read the face sheet. It goes into the footnotes and supplemental schedules to extract detailed breakouts
-- **Runs validation checks** — Byron flags potential issues like year mismatches, recipient name or TIN mismatches, and blank forms with no reportable amounts
-- **Assigns confidence scores** — each field gets marked as either "high confidence" (likely correct) or "review" (deserves closer attention)
+## Roll forward intelligence
 
-## Step 3: Review and approve
+If your firm has prior year data, Byron uses it. When this year's documents come in, Byron matches them to the client's expected documents from last year automatically — so nothing slips through and nothing gets duplicated.
 
-This is where you stay in control. Byron presents a **side-by-side view** — the original PDF on the left, the extracted data on the right.
+New to Byron? No prior data needed. You create a new client, upload documents, and Byron handles the rest.
 
-A few things are designed to save you time:
+## Built for how firms actually work
 
-- **Validated sections collapse automatically.** If Byron matched the recipient information and found no issues, that section is already collapsed so you don't waste time re-checking it. Sections with warnings stay open and draw your attention.
-- **Anchors show you exactly where each number came from.** Click on any field and Byron highlights the spot on the PDF where it pulled the data. You can choose between "jump and zoom" (takes you right to it) or "scroll into view" (shows a pointer arrow).
-- **Filter by status.** If you want to focus on the fields that need the most attention, filter by "review" to see only the fields Byron is less confident about. Once those are handled, switch to "filled" to check the rest.
-- **Edit anything.** If Byron got a number wrong, just type the correct value. The field updates to "corrected" and logs who changed it and when.
-- **Approve as you go.** Check off each field or use the bulk approve option to approve an entire document at once. Every approval is tracked in the audit log with timestamps and user info, so your team always knows who reviewed what.
+Multiple team members can work on the same client at the same time. Permissions, approval states, and audit trails are designed for real firm workflows — so the work of a seasonal preparer, a senior reviewer, and a partner all live in one system without stepping on each other.
 
-<Tip>
-For K-1s with many fields, a common approach is to filter by "review" first, approve those individually, then bulk approve the remaining high-confidence fields.
-</Tip>
-
-### Validation warnings you'll see
-
-Byron automatically flags issues that need your attention. Here are the most common:
-
-- **Year mismatch** — the document's tax year doesn't match the return year. This can happen legitimately with real estate taxes charged in one year and paid in the next.
-- **Recipient mismatch** — the recipient name on the document doesn't match the taxpayer or spouse. This often comes up with trusts, disregarded entities, or 1099-Qs issued to a dependent child.
-- **No reportable amounts** — the form exists but has no dollar figures on it. Common with 1099-MISC or 1099-OID pages in a composite statement that don't apply to your client.
-
-In every case, **you have the final say.** You can override any automated decision — approve a flagged document, reject one that was auto-approved, or correct any field.
-
-## Step 4: Export to your tax software
-
-Once you've reviewed and approved everything, click **Create Export** in the top right corner. Byron supports the following export formats:
-
-| Format | Status |
-| --- | --- |
-| Lacerte Tax | Available |
-| CCH Axcess Tax | Available |
-| UltraTax CS | Available |
-| Drake Tax | Coming soon |
-| GoSystem Tax | Coming soon |
-| Excel workbook | Available |
-| Combined PDF | Available |
-
-For direct tax software imports, Byron formats the data to match your platform's import requirements — no reformatting or manual re-entry needed.
-
-The **Excel work paper** export is especially useful for review. It includes:
-
-- **Hyperlinked tabs** for every document type (W-2, 1099, K-1, Schedule C)
-- **A K-1 summary tab** that consolidates all K-1 data by line across every K-1 in the client, with working formulas you can adjust (e.g., toggling between passive and non-passive)
-- **A consolidated state K-1 summary** that rolls up all state-level K-1 data across every K-1, helping you quickly identify which states require filing
-
-## What happens with prior year data
-
-If your firm has been using Byron or has prior year data available, Byron can **roll forward** client information from the previous year. This means your client's expected documents are pre-populated — when you upload this year's W-2s and K-1s, Byron automatically matches them to the prior year entries.
-
-For firms that are new to Byron or don't have roll forward data, you simply create a new client and upload documents fresh. Byron handles everything from there.
-
-## Putting it all together
-
-Here's what a typical workflow looks like during tax season:
-
-<Steps>
-  <Step title="Receive documents from your client">
-    Client sends their W-2s, 1099s, K-1s, and other tax documents — however they normally do (email, portal, in person).
-  </Step>
-  <Step title="Upload to Byron">
-    Drop the documents into the client's folder in Byron. Upload the whole batch at once.
-  </Step>
-  <Step title="Byron processes everything">
-    Within minutes, every document is classified, extracted, and validated. You'll see them appear in the client's document list.
-  </Step>
-  <Step title="Review the extraction">
-    Open each document, check the flagged fields, approve the rest. For most documents, this takes a fraction of the time manual entry would.
-  </Step>
-  <Step title="Export to your tax software">
-    Create an export in your preferred format. Import it into Lacerte, CCH Axcess, UltraTax, or download as Excel work papers for further review.
-  </Step>
-  <Step title="Prepare the return">
-    Continue your return preparation as usual — with the data already entered.
-  </Step>
-</Steps>
-
-<CardGroup cols={2}>
-  <Card title="Quick start: your first document" icon="rocket" href="/getting-started/first-document">
-    Walk through the full process with a single document.
-  </Card>
-
-  <Card title="Supported tax forms" icon="file-lines" href="/uploading/supported-forms">
-    See every document type Byron can process.
-  </Card>
-</CardGroup>
-Add "How Byron works" page
+<Card title="Getting Started" icon="rocket" href="/getting-started/first-document">
+  Set up your account and get running with Byron in under 5 minutes.
+</Card>
