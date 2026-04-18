@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "sequoia",
-  "name": "Draft 1",
+  "name": "Byron",
   "colors": {
     "primary": "#16A34A",
     "light": "#07C983",
@@ -9,75 +9,114 @@
   },
   "favicon": "/favicon.svg",
   "navigation": {
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "icon": "book-open-cover",
-          "href": "https://mintlify.com/docs"
-        },
-        {
-          "anchor": "Blog",
-          "icon": "newspaper",
-          "href": "https://mintlify.com/blog"
-        }
-      ]
-    },
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Guide",
         "groups": [
           {
             "group": "Getting started",
             "pages": [
               "index",
-              "getting_started",
-              "Supported_Documents",
-              "FAQ"
+              "how-byron-works",
+              "getting-started/account-setup",
+              "getting-started/first-document",
+              "getting-started/adding-team",
+              "getting-started/seasonal-staff",
+              "getting-started/plans-pricing",
+              "getting-started/glossary"
             ]
           },
           {
-            "group": "Customization",
+            "group": "Managing clients",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
+              "managing-clients/creating-clients",
+              "managing-clients/importing-prior-year",
+              "managing-clients/roll-forward",
+              "managing-clients/organizing-clients",
+              "managing-clients/handling-duplicates"
             ]
           },
           {
-            "group": "Writing content",
+            "group": "Uploading documents",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
+              "uploading-documents/supported-formats",
+              "uploading-documents/single-upload",
+              "uploading-documents/bulk-upload",
+              "uploading-documents/folder-upload",
+              "uploading-documents/auto-classification",
+              "uploading-documents/troubleshooting"
             ]
           },
           {
-            "group": "AI tools",
+            "group": "Reviewing extracted data",
             "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              "reviewing-data/review-screen",
+              "reviewing-data/confidence-scores",
+              "reviewing-data/anchors",
+              "reviewing-data/collapsed-sections",
+              "reviewing-data/filter-by-status",
+              "reviewing-data/editing-fields",
+              "reviewing-data/approve-reject",
+              "reviewing-data/validation-warnings",
+              "reviewing-data/comments-audit",
+              "reviewing-data/bulk-approving",
+              "reviewing-data/k1s"
+            ]
+          },
+          {
+            "group": "Exporting your data",
+            "pages": [
+              "exporting/overview",
+              "exporting/excel-work-papers",
+              "exporting/lacerte",
+              "exporting/cch-axcess",
+              "exporting/ultratax",
+              "exporting/drake",
+              "exporting/gosystem",
+              "exporting/excel-workbook",
+              "exporting/combined-pdf",
+              "exporting/import-templates"
+            ]
+          },
+          {
+            "group": "Managing your firm",
+            "pages": [
+              "managing-firm/inviting-members",
+              "managing-firm/roles-permissions",
+              "managing-firm/billing",
+              "managing-firm/seasonal-staff",
+              "managing-firm/notifications"
+            ]
+          },
+          {
+            "group": "Security and compliance",
+            "pages": [
+              "security/data-protection",
+              "security/compliance",
+              "security/retention-deletion",
+              "security/ai-and-data"
+            ]
+          },
+          {
+            "group": "Help and support",
+            "pages": [
+              "help/faq",
+              "help/validation-warnings-guide",
+              "help/reporting-bugs",
+              "help/contact-support"
             ]
           }
         ]
       },
       {
-        "tab": "API reference",
+        "tab": "Changelog",
         "groups": [
           {
-            "group": "API documentation",
+            "group": "Changelog",
             "pages": [
-              "api-reference/introduction"
-            ]
-          },
-          {
-            "group": "Endpoint examples",
-            "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "changelog/release-notes",
+              "changelog/tax-season-updates",
+              "changelog/upcoming-features"
             ]
           }
         ]
@@ -88,32 +127,26 @@
     "links": [
       {
         "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "href": "mailto:support@usebyron.com"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Open Byron",
+      "href": "https://app.usebyron.com"
     }
   },
   "contextual": {
     "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
+      "copy",
+      "view",
+      "chatgpt",
+      "claude"
+    ]
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "linkedin": "https://www.linkedin.com/company/usebyron"
     }
   },
   "fonts": {
