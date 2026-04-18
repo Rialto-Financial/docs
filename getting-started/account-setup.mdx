@@ -1,12 +1,139 @@
 ---
 title: "Getting Started"
-description: "Get your Byron account ready in a few minutes — connect your tax software, configure your firm settings, and invite your team."
+description: "Get your Byron account ready in a few minutes — create your ogranization, configure your settings, connect your tax software, and invite your team."
 ---
 
-# Setting up your account
+Setting up Byron takes only 4 steps which you can complete in less than 10 minutes. Once setup is complete, your firm is ready to upload its first document.
 
-Get your Byron account ready in a few minutes — connect your tax software, configure your firm settings, and invite your team.
+1. Create your Byron account
+2. Configure your organization settings
+3. Connect your tax preparation software
+4. Invite your team
 
 <Note>
-  This page is still in progress. Check back soon, or [contact support](/help/contact-support) if you have questions.
+  You'll need administrator access and login credentials for any tax software you plan to connect.
+
+  You can skip any step and come back later. The only requirement before processing documents is creating your account.
 </Note>
+
+## Step 1: Create your firm account
+
+Visit [app.usebyron.com](https://app.usebyron.com) and sign up. During signup, you'll be asked for a few basics:
+
+- **Firm name** — what your team and clients will see across Byron
+- **Primary contact** — name and email of the person managing the account
+- **Tax preparation software** — Lacerte, CCH Axcess, UltraTax, or Other (you can change this later)
+
+<Note>
+  Every Byron account can export to **Excel work papers** and **combined PDF**, regardless of which tax software you select. A direct tax software integration is optional — not required — to use Byron.
+</Note>
+
+Once your firm is created, you'll land on your dashboard.
+
+## Step 2: Configure your firm settings
+
+From the dashboard, open **Settings → Firm** and complete the following. These details are reused across exports, audit logs, and team invites, so filling them in now saves time later.
+
+- **Firm details** — firm name, EIN, jurisdiction, and licensing information
+- **Branding** — upload your firm's logo to appear on exports and client-facing materials
+- **Default workflows** — set the default approval and review behavior for your firm (you can override these per client)
+- **Notifications** — choose how and when team members are alerted to new documents, completed extractions, or pending reviews
+
+<Tip>
+  If multiple people at your firm will be configuring settings, decide up front who owns notifications and default workflows. Inconsistent defaults cause confusion during peak season.
+</Tip>
+
+## Step 3: Connect your tax preparation software
+
+Byron exports extracted data directly into your tax prep software — no reformatting, no manual re-entry. Setup is a one-time configuration per platform.
+
+Open **Settings → Integrations** and follow the steps for your software.
+
+<AccordionGroup>
+  <Accordion title="Lacerte" icon="gear">
+    Byron exports to Lacerte using a configuration file you import once into Lacerte's Data Conductor. After that, Byron-generated exports drop straight into the right client return.
+
+    1. Go to **Settings → Integrations → Lacerte**
+    2. Click **Configure Lacerte export**
+    3. Download the Lacerte configuration file
+    4. Open Lacerte and import the file following the on-screen instructions
+    5. Run a test export from Byron to confirm the connection
+
+    See the [Lacerte export guide](/exporting/lacerte) for the full walkthrough.
+  </Accordion>
+
+  <Accordion title="CCH Axcess Tax" icon="gear-complex">
+    Byron connects to CCH Axcess via OAuth. You'll need your CCH account number and admin access in CCH.
+
+    1. Go to **Settings → Integrations → CCH Axcess**
+    2. Click **Connect CCH Axcess**
+    3. Enter your CCH account number
+    4. Sign in and authorize Byron when CCH prompts you
+    5. Confirm the connection status shows **Connected**
+
+    <Note>
+      If authorization fails, your CCH administrator may need to enable API access for your account. Contact CCH support if you're stuck.
+    </Note>
+
+    See the [CCH Axcess export guide](/exporting/cch-axcess) for the full walkthrough.
+  </Accordion>
+
+  <Accordion title="UltraTax CS" icon="gear">
+    Byron exports to UltraTax CS in a format ready to import directly into your client return.
+
+    1. Go to **Settings → Integrations → UltraTax**
+    2. Click **Configure UltraTax export**
+    3. Follow the on-screen prompts to confirm your UltraTax version
+    4. Run a test export from Byron to confirm the connection
+
+    See the [UltraTax export guide](/exporting/ultratax) for the full walkthrough.
+  </Accordion>
+
+  <Accordion title="Drake Tax or GoSystem Tax" icon="gear">
+    Direct integrations for Drake Tax and GoSystem Tax are **coming soon**. In the meantime, you can still use Byron by exporting to **Excel work papers** or **combined PDF**.
+
+    [Let us know](mailto:support@usebyron.com) which platform you use so we can prioritize.
+  </Accordion>
+
+  <Accordion title="Something else" icon="gear">
+    Don't see your tax software? Byron's **Excel work paper** export is designed for direct use with any prep workflow. It includes hyperlinked tabs for every document type and a consolidated K-1 summary with working formulas.
+
+    If you use a tax platform not listed here, [email us](mailto:support@usebyron.com) — we're continuously adding integrations based on customer demand.
+  </Accordion>
+</AccordionGroup>
+
+### Confirming your integration is working
+
+Once connected, head to **Settings → Integrations** to check the status indicators:
+
+- **Green** — the integration is active and ready to export
+- **Yellow** — the integration needs attention (usually a re-authentication)
+- **Red** — the integration has failed and needs to be reconfigured
+
+<Tip>
+  Run one test export before tax season opens. Catching a misconfiguration in January is a lot easier than catching it on April 10th.
+</Tip>
+
+## Step 4: Invite your team
+
+You don't have to use Byron alone. Add the people who'll be uploading, reviewing, or approving documents during tax season.
+
+1. Go to **Settings → Team**
+2. Click **Invite member**
+3. Enter their email and assign a role (Admin, Reviewer, or Preparer)
+4. They'll receive an invite email with a link to set up their account
+
+Roles control what each person can see and do — for example, who can approve final exports versus who can only upload and review.
+
+For a full breakdown of roles and best practices for staffing, see [Adding your team](/getting-started/adding-team). If you're bringing on seasonal preparers, see [Onboarding seasonal staff](/getting-started/seasonal-staff).
+
+## What's next
+
+Your account is ready. Here's what to do next.
+
+<Card title="Quick start: your first document" icon="play" href="/getting-started/first-document">
+  Walk through Byron end-to-end with a single document.
+</Card>
+
+<CardGroup cols={2}>
+</CardGroup>
