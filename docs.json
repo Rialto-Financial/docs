@@ -31,12 +31,9 @@
             "group": "Getting started",
             "pages": [
               "getting-started/welcome-page",
+              "getting-started/how-byron-works-page",
               "getting-started/account-setup",
-              "getting-started/first-document",
-              "getting-started/adding-team",
-              "getting-started/seasonal-staff",
-              "getting-started/plans-pricing",
-              "getting-started/glossary"
+              "getting-started/first-document"
             ]
           },
           {
