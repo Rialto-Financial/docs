@@ -1,12 +1,88 @@
 ---
 title: "The review screen"
-description: "Side-by-side view of the original PDF and the extracted data."
+description: "A tour of Byron's review workspace — the PDF on the left, extracted fields on the right, and the controls that help you move through a filing quickly."
 ---
 
-# The review screen
+From the client dashboard, click any document in **Ready for Review** status to open the review screen. This is where you confirm what the agent extracted. The screen is built around a single idea: you should never have to leave the page or switch windows to verify a field. The source document sits on the left and every field Byron pulled sits on the right.
 
-Side-by-side view of the original PDF and the extracted data.
+This page walks through the layout so you know what each part of the screen is for. 
 
-<Note>
-This page is still in progress. Check back soon, or [contact support](/help/contact-support) if you have questions.
-</Note>
+<Info>
+  For the actual review workflow — approving fields, leaving comments, using anchors, reading the audit log — see [Review process](https://byron-bb7c63f4.mintlify.app/reviewing-extracted-data/review-process).
+</Info>
+
+<Accordion title="The PDF panel (left side)">
+  The left half of the screen is a live view of the document Byron processed. The toolbar across the top of the panel gives you everything you need to inspect the source without opening the file elsewhere.
+
+  From left to right, the toolbar controls are:
+
+  - **Page navigation.** For multi-page documents (a K-1 packet, a brokerage 1099 consolidated statement), the page navigator lets you jump between pages. 
+  - **Hand / pan tool.** Click and drag to move around a zoomed-in page without changing zoom level. Useful when you're verifying a small number (a basis figure, an EIN) and want to stay zoomed in as you scan the page.
+  - **Zoom in / zoom out.** Zoom up to read fine print — the scans Byron accepts can come in at any resolution, so a coffee-stained faxed 1099 often needs a closer look than a clean digital PDF.
+  - **Fill / fit view.** Switch to fit the page view to zoom out on the file.
+  - **Search.** Type any string to find it in the document text. Matches highlight in place.
+  - **Rotate.** For documents that came in sideways or upside down after scanning.
+
+  Most of the time you won't touch the toolbar. When Byron flags a field, clicking the field on the right panel auto-scrolls the PDF to the exact spot it came from and frames it in a highlight box. That's the primary way you'll navigate the source. The toolbar is there for the cases where you want to look around on your own.
+</Accordion>
+
+<Accordion title="The extracted data panel (right side)">
+  The right half of the screen is everything Byron extracted from the document, grouped by section.
+
+  Two sets of controls sit at the top of this panel:
+
+  <Tabs>
+    <Tab title="1. Action buttons">
+      The top-right of the panel shows **Save**, **Reject**, and **Approve**. Save holds your in-progress changes without closing the review. Reject sends the document out of the filing — use it when Byron misidentified the form type, when the document belongs to a different client, or when the scan is unreadable. Approve marks the document as reviewed and ready for export. Approving is the action that releases a document into the rest of the filing.
+
+      Rejecting and approving are both reversible from the filing workspace until you export.
+    </Tab>
+    <Tab title="2. Filter tabs">
+      ### Filter tabs
+
+      Below the action buttons, a row of tabs lets you filter the field list by review status. The counts update as you work through the document:
+
+      - **All** — every field Byron extracted.
+      - **Filled** — all fields where Byron returned a value, regardless of confidence.
+      - **High** — fields the confidence model placed in the high-confidence bucket. These are the ones you can usually skim past.
+      - **Review** — fields Byron wants you to look at. A zero here means nothing is outstanding.
+      - **Corrected** — fields you've edited during this review.
+
+      A download icon at the far right of the tab row  opens the original PDF in a new tab if you need the full file for your workpapers, a client email, or a second pair of eyes.
+    </Tab>
+  </Tabs>
+
+   
+</Accordion>
+
+## Collapsed vs. expanded sections
+
+Sections start collapsed or expanded based on Byron's confidence across the section as a whole.
+
+- **Collapsed by default.** When every field in a section landed in the high-confidence bucket and there are no open warnings, the section collapses and shows a **Byron Validated** badge next to the section name and field count. The assumption is that you don't need to look at these — the agent is confident, and nothing is flagged. Click the section header to expand it if you want to verify anyway.
+- **Expanded by default.** Sections with any field in the review bucket, any warning, or any correction open up automatically. The agent is drawing your attention to where it wants a human pass.
+
+Status chips sit next to each field inside an expanded section. Common ones include:
+
+- `High Confidence` (a plain chip, no action needed)
+- `Validated` (you've already approved this field)
+- `Warning` (unresolved flags on this field — see [Validation flags explained](/reviewing-extracted-data/validation-flags))
+- `Corrected` (you edited this field from Byron's original extraction)
+
+## The anchor link between the two panels
+
+Every field on the right is anchored to the pixel region on the PDF it came from. Click 'Show ⚓︎' button in the extracted data panel to view the anchors.
+
+Click a field and the PDF panel scrolls and zooms to that spot, with a colored box around the source text. This is how you verify a value without reading the whole form — Byron tells you where it got the number, and you decide whether the number matches. Anchors are covered in detail in [Review process](/reviewing-extracted-data/review-process).
+
+## What's next
+
+<CardGroup cols={2}>
+  <Card title="Review process" icon="circle-check" href="/reviewing-extracted-data/review-process">
+    Approve fields, leave comments, filter by status, and read the audit log.
+  </Card>
+
+  <Card title="Validation flags explained" icon="triangle-exclamation" href="/reviewing-extracted-data/validation-flags">
+    What each warning means and how Byron decides to flag a field.
+  </Card>
+</CardGroup>
