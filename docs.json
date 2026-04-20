@@ -55,10 +55,8 @@
             "group": "Reviewing extracted data",
             "pages": [
               "reviewing-data/review-screen",
-              "reviewing-data/confidence-scores",
-              "reviewing-data/anchors",
-              "reviewing-data/collapsed-sections",
               "reviewing-data/filter-by-status",
+              "reviewing-data/confidence-scores",
               "reviewing-data/editing-fields",
               "reviewing-data/approve-reject",
               "reviewing-data/validation-warnings",

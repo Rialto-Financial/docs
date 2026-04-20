@@ -1,12 +1,82 @@
 ---
-title: "Filtering by review status"
-description: "Focus on what needs attention by filtering the field list."
+title: "Review process"
+description: "How to move through a document in Byron — anchors, filters, approvals, comments, and the audit log that tracks every change."
 ---
 
-# Filtering by review status
+A review in Byron is designed to take minutes, not hours. Most fields come back with high confidence and need no action. Your job is to handle the exceptions: the fields the agent flagged, the ones with warnings, and the ones a second preparer will want to see a note on. This page covers the mechanics.
 
-Focus on what needs attention by filtering the field list.
+For the screen layout itself — what each panel is for, how sections expand, what the filter tabs mean — see [The review screen](/reviewing-extracted-data/review-screen). For a deep dive on specific warning types, see [Validation flags explained](/reviewing-extracted-data/validation-flags).
 
-<Note>
-This page is still in progress. Check back soon, or [contact support](/help/contact-support) if you have questions.
-</Note>
+## A good default order
+
+Most preparers work a document in this order: jump to the **Review** filter first to clear outstanding flags, skim the **Corrected** tab to make sure earlier edits look right, then either approve the document or expand the other sections for a final pass. You don't have to follow this — the review is non-linear — but starting with Review and Corrected surfaces everything the agent or you have already touched.
+
+<AccordionGroup>
+  <Accordion title="Using anchors to find fields">
+    Every field Byron extracted is linked to its source location on the PDF it came from. An anchors toggle 'Show ⚓︎' sits at the top of the right panel and can be used to move to the exact region Byron pulled the value from.
+
+    **Scroll-into-view vs. jump-and-zoom.** Short-form documents (W-2, 1099-INT, 1099-DIV) just scroll the PDF to the field. Longer documents and multi-page packets also zoom in so you can see the source without hunting.
+
+    **Hover for a preview.** Hovering a field (without clicking) flashes the source region in yellow so you can confirm you're about to jump to the right place before you commit to the scroll.
+
+    **When you may want to keep anchors off.** Turn it off when you're scrolling through a long form and don't want the PDF to jump every time you pass a field.
+  </Accordion>
+
+  <Accordion title="Filtering by review status">
+    The filter tabs at the top of the right panel — All, Filled, High, Review, Corrected — narrow the field list. Counts update live as you work.
+
+    Two filters are worth a note:
+
+    1. **Review** is your triage queue. Anything with an open warning or a confidence score the model wasn't sure about shows up here. A zero in parentheses means the agent has no outstanding asks for you — you can approve the document without expanding every section. A non-zero count is the number of fields you still need to look at.
+    2. **Corrected** shows every field you've changed from Byron's original extraction this session. Use it as a sanity check before approving — it's the fastest way to confirm you haven't introduced a typo in an edit.
+  </Accordion>
+</AccordionGroup>
+
+## Approving fields
+
+Approvals work at two levels.
+
+**Field-level approval.** In an expanded section, each field has an approve control next to its value. Clicking it flips the field's status chip to `Validated` and marks the change in the audit log. Field-level approval is useful when you want to certify individual numbers as you go — for example, a partner's ending capital account that you've reconciled against last year's K-1.
+
+**Document-level approval.** The **Approve** button at the top of the right panel finalizes the whole document. Approving a document is what releases it into the rest of the filing and makes it available for export. You can approve without having approved every field individually — document-level approval is the common case, and field-level approval is for when you want a finer-grained trail.
+
+If you approve too quickly, you can reopen a document from the filing workspace at any point until export.
+
+## Editing a field
+
+Click any field value to open it for editing. Type the corrected value, press Enter to commit. The field chip flips to `Corrected`, and the change enters the audit log with the original Byron extraction, your new value, and a timestamp. Editing also clears any warning on the field, on the assumption that you've resolved whatever the agent was worried about.
+
+## Adding comments to fields
+
+Click a field name (not the value) to open a comment thread on that field. Comments are tied to the specific field, not the document as a whole.
+
+Use comments when:
+
+- You want to flag something for a second review without blocking approval.
+- You're leaving context for next year's return ("this client's K-1 capital method changed in 2025 — pulled from the notes on the K-1 footnote page").
+
+Comments show up on the field inline and in the document's comment sidebar. They persist through export and into the filing record, so they're part of your workpaper trail.
+
+## The audit log
+
+A correction or a comment made to a field gets recorded in the audit log of the document. The log captures, for each entry, who made the change, when they made it, what the change was, and where relevant.
+
+## Rejecting a document
+
+Use **Reject** when the document doesn't belong in the filing at all — wrong client, wrong tax year, unreadable scan, misidentified form type. Rejecting moves the document out of the filing but keeps it recoverable from the filing workspace. Rejected documents don't export.
+
+<Tip>
+  Don't use Reject for a single bad field — edit the field directly and approve the document instead.
+</Tip>
+
+## What's next
+
+<CardGroup cols={2}>
+  <Card title="Understanding confidence score" icon="triangle-exclamation" href="/reviewing-extracted-data/validation-flags">
+    What each score means and how Byron decides to flag a field.
+  </Card>
+
+  <Card title="Export overview" icon="file-export" href="/exporting/overview">
+    Hand a reviewed filing back to Lacerte, CCH Axcess, or GoSystem.
+  </Card>
+</CardGroup>
