@@ -111,18 +111,6 @@
         ]
       },
       {
-        "tab": "Guides",
-        "hidden": true,
-        "groups": [
-          {
-            "group": "Getting started",
-            "pages": [
-              "getting_started"
-            ]
-          }
-        ]
-      },
-      {
         "tab": "Mintlify drafts pages",
         "hidden": true,
         "pages": [

@@ -1,12 +1,49 @@
 ---
 title: "Understanding confidence scores"
-description: "How Byron flags fields as 'review' vs. 'high confidence' and what to do with each."
+description: "How Byron decides which extracted fields it's sure about, which ones need a human pass, and how that decision shapes what you see on the review screen."
 ---
 
-# Understanding confidence scores
+Every field Byron extracts comes back with a confidence score. The score is Byron's assessment of how sure it is that the value it pulled is accurate, and it's the single signal that drives almost everything you see on the review screen — which sections collapse, which fields get a `High Confidence` chip, which ones land in the Review queue, and which ones come with a warning underneath.
 
-How Byron flags fields as 'review' vs. 'high confidence' and what to do with each.
+This page explains what each level means in practice, and how the score should change the way you work through a document.
 
-<Note>
-This page is still in progress. Check back soon, or [contact support](/help/contact-support) if you have questions.
-</Note>
+## The confidence buckets and what to do at each level
+
+Byron groups field-level scores into buckets that correspond to the filter tabs at the top of the right-hand panel.
+
+- **Filled** is everything where Byron returned a value, regardless of confidence — High and Review combined, plus any field you've already touched. It's the catch-all view.
+- **High** is the agent's "I'm confident, you can skim past this" bucket.
+  <Tip>
+    You can deprioritize fields with High confidence level in your review process. You can trust them on the first pass and return for further review at the final stage before approving the document.
+  </Tip>
+
+- **Review** is the queue Byron is asking you to look at closely. The Review tab is where most preparers start a review.
+  <Tip>
+    Click into the field, look at the anchored region on the PDF, and decide. Either the value Byron pulled matches the source — in which case approve the field — or it doesn't, in which case edit it. Either action clears it from the Review queue.
+  </Tip>
+- **Corrected** is fields you edited from Byron's original extraction during this session. It's a sanity-check view: before approving, glance at Corrected to confirm you didn't introduce a typo while fixing something else.
+  <Tip>
+    Skim them once before approving the document. The audit log captures each edit with the original value, your new value and who made the change.
+    A field can move between buckets as you work — editing a Review field puts it in Corrected, approving a Review field marks it Validated and the count drops by one.
+  </Tip>
+- **Approved fields.** These are the fields you've explicitly approved at the field level. 
+
+## How confidence shapes the screen
+
+The confidence pattern across a document is what decides whether a section opens or stays collapsed when you land on the review screen.
+
+## Confidence and your firm's review policy
+
+The confidence score is a signal, and you can decide how you want to review and approve  fields with various levels of confidence. These confidence levels are here to facilitate your review process.
+
+## What's next
+
+<CardGroup cols={2}>
+  <Card title="Review process" icon="circle-check" href="/reviewing-extracted-data/review-process">
+    Approve fields, leave comments, and use the audit log.
+  </Card>
+
+  <Card title="Export overview" icon="file-export" href="/exporting/overview">
+    Hand a reviewed filing back to your tax software.
+  </Card>
+</CardGroup>
