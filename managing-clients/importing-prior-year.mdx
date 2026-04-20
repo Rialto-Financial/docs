@@ -1,12 +1,61 @@
 ---
 title: "Importing prior year data"
-description: "Pull in IDATA and .DAT files to roll forward last year's client data into Byron."
+description: "Bring last year's client records and expected documents into Byron using your IDATA or .DAT file — so this year's documents match automatically."
 ---
 
-# Importing prior year data
+If your firm has been preparing returns in other tax software, you already have client information, filing status, and expected documents sitting in that system. Importing prior year data into Byron means you don't have to recreate any of it. Byron maps last year's clients into this year's Byron workspace, and when new documents come in, they match to the right records automatically.
 
-Pull in IDATA and .DAT files to roll forward last year's client data into Byron.
+## What gets imported
+
+When you import a prior year file, Byron brings over:
+
+- **Client records** — name, filing status, and contact info
+- **Expected documents** — the W-2s, 1099s, K-1s, and other forms each client received last year, so Byron knows what to look for this year
+- **Entity and relationship details** — where applicable (e.g. pass-through entities, trusts)
+
+The goal isn't to import last year's *return* — it's to import the structure, so this year's documents drop into the right buckets automatically.
+
+## Supported file types
+
+Byron currently accepts:
+
+- **IDATA files** — the standard export from Lacerte
+- **.DAT files** — the Lacerte Data Conductor export
+
+If you use CCH Axcess, UltraTax, or another platform, see [below](#new-to-byron-with-no-prior-year-data).
+
+## How to import
+
+1. Go to **Settings → Import prior year data** (or from your client list, click **Import clients**)
+2. Click **Upload file** and select your IDATA or .DAT export
+3. Byron previews the clients and filings found — review before confirming
+4. Click **Confirm import**
+
+Once it finishes, all imported clients appear in your **Clients** list.
+
+## After the import
+
+Once prior year data is in Byron, two things happen automatically when you start working on this year's returns:
+
+- **Expected document matching** — upload a client's W-2 for this year, and Byron matches it to the W-2 that client had last year. No manual linking needed.
+- **Roll forward** — when you add a new filing for an imported client, their filing status, entity relationships, and expected documents carry forward. See [Roll forward](/managing-clients/roll-forward).
+
+## New to Byron with no prior year data
+
+If your firm is starting fresh, or you're bringing on a new client mid-season, there's no prior year file to import. Just create clients manually and upload their documents directly. See [Creating a new client](/managing-clients/creating-clients) and [Quick start: your first document](/getting-started/first-document).
 
 <Note>
-This page is still in progress. Check back soon, or [contact support](/help/contact-support) if you have questions.
+If you use CCH Axcess, UltraTax, or another platform that exports in a different format, [contact support](/help/contact-support) — we're continuously adding support for prior year imports from more systems.
 </Note>
+
+## What's next
+
+<CardGroup cols={2}>
+  <Card title="Roll forward" icon="arrow-rotate-right" href="/managing-clients/roll-forward">
+    How prior year data flows into this year's filings automatically.
+  </Card>
+
+  <Card title="Handle duplicate uploads" icon="copy" href="/managing-clients/handling-duplicates">
+    What happens when the same document gets uploaded twice, or matches multiple records.
+  </Card>
+</CardGroup>

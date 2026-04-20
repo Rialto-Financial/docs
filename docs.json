@@ -120,6 +120,7 @@
       },
       {
         "tab": "Guides",
+        "hidden": true,
         "groups": [
           {
             "group": "Getting started",
@@ -131,6 +132,7 @@
       },
       {
         "tab": "Mintlify drafts pages",
+        "hidden": true,
         "pages": [
           {
             "group": "API documentation",
@@ -188,6 +190,9 @@
             ]
           }
         ]
+      },
+      {
+        "tab": "Untitled Tab"
       }
     ]
   },

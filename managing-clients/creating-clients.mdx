@@ -1,12 +1,74 @@
 ---
 title: "Creating a new client"
-description: "Add a new client to Byron and set up their profile."
+description: "Add a new client to Byron during filing creation — set up once, reuse every tax year."
 ---
 
-# Creating a new client
+In Byron, a **client** is the person (or household) whose return your firm prepares. Each client record holds the minimum information Byron needs to stay in sync with your tax software: a name, a filing status, and a client ID that ties back to the corresponding record in Lacerte or CCH. Create the record once, and the same client is available to every filing you do for them in future tax years.
 
-Add a new client to Byron and set up their profile.
+## Before you create a client
 
-<Note>
-This page is still in progress. Check back soon, or [contact support](/help/contact-support) if you have questions.
-</Note>
+Whether you need to create a client manually depends on how Byron is connected to your tax software.
+
+**If your firm uses CCH Axcess**, your clients are likely already in Byron. During setup, your firm sends a one-time `.dat` export containing every pro forma return from CCH for the current tax year, and Byron pre-populates those clients for you. You'll see them in the client selector with a **Rolled Forward** status. If the client you need is there, pick them — don't create a duplicate.
+
+**If your firm uses Lacerte**, clients are created per filing. Prior-year context — basis, naming conventions, election carryovers — flows into each filing via the iData file you upload at export time, not through a bulk client import.
+
+**If Byron isn't connected to your tax software yet**, start with [Connect your tax software](/getting-started/account-setup#connect-your-tax-software).
+
+## Creating a client
+
+New clients are created as part of starting a new filing. From your dashboard:
+
+<Step title="Start a new filing">
+  From your dashboard, click **Add Filing**.
+</Step>
+<Step title="Choose filing type and tax year">
+  Select:
+
+  - **Filing type** (e.g., Form 1040)
+  - **Tax year**
+</Step>
+<Step title="Create a new client">
+  In **Client**, click **Create new client**.
+</Step>
+<Step title="Enter client details">
+  Fill in the client details (fields may vary by filing type):
+
+  - **Client name**
+  - **Email** (optional)
+  - **Filing status** - **Single**, **Married filing jointly**, or **Married filing separately, Head of Household (HOH), Qualified Surviving Spouce (QSS).**
+</Step>
+<Step title="Create the filing">
+  Click **Create Filing**. Byron opens the filing workspace so you can upload documents right away.
+</Step>
+## Why Byron asks for so little
+
+Byron intentionally keeps client creation light. Personal details like SSN, date of birth, occupation, phone, and address already live in your tax software — Byron doesn't re-collect them. The client record in Byron exists to route documents, track filings, and point back at the right record in Lacerte or CCH at export time. The identifying details that matter for placement on the return travel with the export, not with the client record.
+
+This has a few practical consequences. Creating a client is fast, even mid-call. You don't risk keeping duplicate copies of sensitive data in two systems. And when you edit a client's personal details later, you do it in your tax software, not Byron.
+
+## Client IDs and your tax software
+
+Every filing exports back to your tax software using the tax-software client ID, so Byron keeps that ID attached to the client record. For CCH Axcess firms, the ID comes from the one-time `.dat` export at setup and pre-fills when you submit a filing. For Lacerte firms, it's handled through the iData flow at export time.
+
+The practical takeaway: when you create a new client, pick the right record — or, for existing clients, select from the list rather than re-creating. A mismatched selection means re-exporting or manually moving data on the tax-software side.
+
+## Reusing a client across years
+
+A client record persists across tax years. When you add a filing for the same client next season, select them from the existing-client toggle and their details carry forward automatically.
+
+For CCH Axcess firms, clients rolled forward in CCH show a **Rolled Forward** status in the client list — Byron has last year's context for basis tracking and naming conventions, and can accept incremental imports if new documents (like late K-1s) arrive after the first pass. For Lacerte firms, that prior-year context flows into each filing via the iData file you upload at export time.
+
+See [Roll forward](/managing-clients/roll-forward) for the full picture of how prior-year continuity works across both platforms.
+
+## What's next
+
+<CardGroup cols={2}>
+  <Card title="Upload documents" icon="upload" href="/uploading-documents/overview">
+    Drag and drop W-2s, 1099s, K-1s, and more — Byron sorts and extracts them automatically.
+  </Card>
+
+  <Card title="Organize your client list" icon="users" href="/managing-clients/organizing-clients">
+    Use search and filters to navigate large client lists.
+  </Card>
+</CardGroup>
