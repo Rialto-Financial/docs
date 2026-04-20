@@ -1,0 +1,58 @@
+---
+title: "Uploading documents and processing"
+description: "Drop a single form or a full client package into Byron — no sorting, renaming, or pre-classification needed."
+---
+
+Byron's uploader is designed to take source documents the way they actually arrive: one at a time when a late 1099 shows up, or all at once when a client drops a full package. This page covers both paths, what happens while Byron processes the files, and how to handle documents that come in later.
+
+If you haven't yet confirmed what Byron accepts, see [Supported file types and formats](/uploading-documents/supported-file-types) first.
+
+## Two ways to upload
+
+You upload documents from inside a filing — either the filing you just created or an existing one opened from your client list.
+
+**Drag and drop** is the fastest path. Grab one or more files from your desktop, Finder, or email client and drop them anywhere on the filing workspace. Byron accepts drops on any part of the page, not just a specific dropzone.
+
+**Click to upload** works for the same job. Click the **Upload** button in the filing workspace and select one or more files from your file picker.
+
+There's no difference in how Byron processes the two methods — drag-and-drop is just faster when you already have the files open in another window.
+
+## Upload and processing of the document
+
+Drag the file onto the filing workspace, or click **Upload** and pick the file. Byron ingests it, auto-classifies the form type, and begins processing immediately. The document appears in the filing's document list with a **Processing** status. When extraction finishes, the status changes to **Ready for Review**.
+
+For a typical W-2 or 1099, this takes well under a minute. Complex K-1s with footnotes and state schedules can take several minutes — Byron parses the footnotes and supplemental statements, which is more work than a standard form.
+
+You can upload another document while the first one is still processing. Each file runs on its own, so nothing is blocked.
+
+## What Byron does while processing
+
+During the **Processing** window for each document, Byron is:
+
+- Identifying the document type and tax year.
+- Pulling every relevant field, including footnotes and supplemental schedules on K-1s.
+- Running validation checks — right tax year, right recipient, real reportable amounts.
+- Scoring how confident it is in each extracted value so you know which fields need your attention.
+
+When the drop lands, Byron:
+
+- **Auto-classifies every file** based on contents, not filename. You don't need to sort, rename, or label anything first.
+- **Routes each document to the right section** of the filing workspace — W-2 income, interest and dividends, K-1s, and so on.
+
+When a document reaches **Ready for Review**, click it to open the side-by-side review panel: PDF on the left, extracted fields on the right. See [The review screen](/reviewing-data/review-screen) for the walkthrough.
+
+<Note>
+  For upload issues that aren't a data flag — a file that won't process, a stuck document, or a bug — use the Report an issue button in the top-right of the workspace.
+</Note>
+
+## What's next
+
+<CardGroup cols={2}>
+  <Card title="The review screen" icon="magnifying-glass" href="/reviewing-data/review-screen">
+    Work through extracted fields in the side-by-side review panel.\
+  </Card>
+
+  <Card title="Supported documents" icon="file-lines" href="/uploading-documents/supported-docs">
+    The full list of tax forms Byron recognizes — W-2s, 1099s, K-1s, K-3s, and more.
+  </Card>
+</CardGroup>

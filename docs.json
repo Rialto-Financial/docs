@@ -47,12 +47,8 @@
             "group": "Uploading documents",
             "pages": [
               "uploading-documents/supported-formats",
-              "uploading-documents/single-upload",
-              "uploading-documents/bulk-upload",
-              "uploading-documents/folder-upload",
-              "uploading-documents/auto-classification",
-              "managing-clients/handling-duplicates",
-              "uploading-documents/troubleshooting"
+              "uploading-documents",
+              "uploading-documents/supported-docs"
             ]
           },
           {
