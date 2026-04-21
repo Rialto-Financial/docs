@@ -8,7 +8,7 @@ From the client dashboard, click any document in **Ready for Review** status to 
 This page walks through the layout so you know what each part of the screen is for.
 
 <Info>
-  For the actual review workflow — approving fields, leaving comments, using anchors, reading the audit log — see [Review process](https://byron-bb7c63f4.mintlify.app/reviewing-extracted-data/review-process).
+  For the actual review workflow — approving fields, leaving comments, using anchors, reading the audit log — see [Review process](/reviewing-data/review-process).
 </Info>
 
 <Accordion title="The PDF panel (left side)">
@@ -48,21 +48,21 @@ This page walks through the layout so you know what each part of the screen is f
       - **Review** — fields Byron wants you to look at. A zero here means nothing is outstanding.
       - **Corrected** — fields you've edited during this review.
 
-      A download icon at the far right of the tab row  opens the original PDF in a new tab if you need the full file for your workpapers, a client email, or a second pair of eyes.
+      A download icon at the far right of the tab row lets you download the document if you need the full file for your workpapers, a client email, or a second pair of eyes.
     </Tab>
   </Tabs>
 </Accordion>
 
 <Accordion title="The anchor link between the two panels">
-  Every field Byron extracted is linked to its source location on the PDF it came from. This can be switched on and off with anchors toggle 'Show ⚓︎' that sits at the top of the right panel.
+  Every field Byron extracted is linked to its source location on the PDF it came from. This can be switched on and off with the anchors toggle that sits at the top of the right panel.
 
-  Click a field and the PDF panel scrolls and zooms to that spot, with a colored box around the source text. This is how you verify a value without reading the whole form — Byron tells you where it got the number, and you decide whether the number matches. Anchors are covered in detail in [Review process](https://byron-bb7c63f4.mintlify.app/reviewing-extracted-data/review-process).
+  Click a field and the PDF panel scrolls and zooms to that spot, with a colored box around the source text. This is how you verify a value without reading the whole form — Byron tells you where it got the number, and you decide whether the number matches. Anchors are covered in detail in [Review process](/reviewing-data/review-process).
 </Accordion>
 
 <Accordion title="Collapsed vs. expanded sections">
   Sections start collapsed or expanded based on Byron's confidence across the section as a whole.
 
-  - **Collapsed by default.** When every field in a section landed in the high-confidence bucket and there are no open warnings, the section collapses and shows a **Byron Validated** badge next to the section name and field count. The assumption is that you don't need to look at these — the agent is confident, and nothing is flagged. Click the section header to expand it if you want to verify anyway.
+  - **Collapsed by default.** When every field in a section landed in the high-confidence bucket and there are no open warnings, the section collapses and shows an **Acacia Validated** badge next to the section name and field count. The assumption is that you don't need to look at these — the agent is confident, and nothing is flagged. Click the section header to expand it if you want to verify anyway.
   - **Expanded by default.** Sections with any field in the review bucket, any warning, or any correction open up automatically. The agent is drawing your attention to where it wants a human pass.
 
   Status chips sit next to each field inside an expanded section. Common ones include:
@@ -72,13 +72,13 @@ This page walks through the layout so you know what each part of the screen is f
   - `Warning` (unresolved flags on this field)
   - `Corrected` (you edited this field from Byron's original extraction)
 
-  See [Understanding confidence scores](https://byron-bb7c63f4.mintlify.app/reviewing-data/confidence-scores) for further information on these status chips.
+  See [Understanding confidence scores](/reviewing-data/confidence-scores) for further information on these status chips.
 </Accordion>
 
 ## What's next
 
 <CardGroup cols={2}>
-  <Card title="Review process" icon="circle-check" href="/reviewing-extracted-data/review-process">
+  <Card title="Review process" icon="circle-check" href="/reviewing-data/review-process">
     Approve fields, leave comments, filter by status, and read the audit log.
   </Card>
 
