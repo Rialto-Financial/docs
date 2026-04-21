@@ -1,0 +1,80 @@
+---
+title: "Uploading documents"
+description: "Add tax documents to a filing one at a time or as a full client package."
+---
+
+Once you've created a filing, the next step is getting documents into it. Byron handles both one-off uploads and full client packages — you don't need to sort or label anything first. The agent reads each document, figures out what it is, and routes it to the right place in the filing.
+
+## Two ways to upload
+
+From inside a filing, you can add documents in either of two ways:
+
+- **Drag and drop** one or more files directly onto the filing workspace.
+- **Click Upload** and choose files from your computer.
+
+Byron accepts PDFs and common image formats. For the full list, see [Supported formats](/uploading-documents/supported-formats).
+
+<Tip>
+  You don't need to split a client package into separate files before uploading. Byron will identify and separate each document inside a multi-form PDF on its own.
+</Tip>
+
+## Upload a single document
+
+Uploading one form at a time is the fastest way to get a quick extraction — useful when a client sends you a single W-2 or corrected 1099 partway through the season.
+
+<Steps>
+  <Step title="Open the filing">
+    From the Dashboard, click into the client and filing you want to add the document to.
+  </Step>
+  <Step title="Add the file">
+    Drag the document onto the filing workspace, or click **Upload** and select it.
+  </Step>
+  <Step title="Wait for processing">
+    The document moves to **Processing** while Byron classifies it and extracts its fields. Simple forms like W-2s and 1099s are usually ready in under a minute. Denser forms like K-1s can take a few minutes.
+  </Step>
+  <Step title="Review when it's ready">
+    Once the status changes to **Ready for Review**, click the document to open the [review screen](/reviewing-data/review-screen).
+  </Step>
+</Steps>
+
+## Upload a full client package
+
+Most firms receive an entire year's worth of documents from a client as one bundle — sometimes a single scanned PDF, sometimes a zip of separate files. You can drop the whole package into Byron at once.
+
+<Steps>
+  <Step title="Select every file in the package">
+    Drag the full set onto the filing, or select them all from the upload dialog.
+  </Step>
+  <Step title="Let Byron classify and split">
+    Byron reads the contents of each file, identifies the form type (W-2, 1099-INT, 1099-DIV, K-1, brokerage statement, etc.), and separates combined PDFs into individual documents automatically.
+  </Step>
+  <Step title="Processing runs in parallel">
+    Documents are processed at the same time, not one after another. Simpler forms will finish first and appear as **Ready for Review** while longer forms are still being extracted.
+  </Step>
+  <Step title="Work through the filing">
+    You can start reviewing completed documents immediately — there's no need to wait for the entire package to finish.
+  </Step>
+</Steps>
+
+## What Byron does while processing
+
+While a document is in **Processing**, the agent is doing several things:
+
+- Identifying the form type and the tax year it applies to.
+- Matching the document to the correct recipient (important for joint filings where each spouse has their own W-2s or 1099s).
+- Reading every field — including handwritten corrections and annotations — and assigning a confidence score to each one.
+- Flagging anything that looks off, so it's surfaced at the top of the review queue.
+
+For how those confidence scores are calculated and what they mean, see [Understanding confidence scores](/reviewing-data/confidence-scores).
+
+## What's next
+
+<CardGroup cols={2}>
+  <Card title="Supported formats" icon="file" href="/uploading-documents/supported-formats">
+    Check which file types and form types Byron can process.
+  </Card>
+
+  <Card title="The review screen" icon="magnifying-glass" href="/reviewing-data/review-screen">
+    Learn how to review and approve the data Byron extracted.
+  </Card>
+</CardGroup>
