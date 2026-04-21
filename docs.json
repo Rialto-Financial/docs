@@ -56,13 +56,7 @@
             "pages": [
               "reviewing-data/review-screen",
               "reviewing-data/filter-by-status",
-              "reviewing-data/confidence-scores",
-              "reviewing-data/editing-fields",
-              "reviewing-data/approve-reject",
-              "reviewing-data/validation-warnings",
-              "reviewing-data/comments-audit",
-              "reviewing-data/bulk-approving",
-              "reviewing-data/k1s"
+              "reviewing-data/confidence-scores"
             ]
           },
           {

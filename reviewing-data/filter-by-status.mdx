@@ -5,7 +5,7 @@ description: "How to move through a document in Byron — anchors, filters, appr
 
 A review in Byron is designed to take minutes, not hours. Most fields come back with high confidence and need no action. Your job is to handle the exceptions: the fields the agent flagged, the ones with warnings, and the ones a second preparer will want to see a note on. This page covers the mechanics.
 
-For the screen layout itself — what each panel is for, how sections expand, what the filter tabs mean — see [The review screen](/reviewing-extracted-data/review-screen). For a deep dive on specific warning types, see [Validation flags explained](/reviewing-extracted-data/validation-flags).
+For the screen layout itself — what each panel is for, how sections expand, what the filter tabs mean — see [The review screen](/reviewing-extracted-data/review-screen).
 
 ## A good default order
 
@@ -23,7 +23,7 @@ Most preparers work a document in this order: jump to the **Review** filter firs
   </Accordion>
 
   <Accordion title="Filtering by review status">
-    The filter tabs at the top of the right panel — All, Filled, High, Review, Corrected — narrow the field list. Counts update live as you work.
+    The filter tabs at the top of the right panel — All, Filled, High, Review, Corrected — narrow the field list. Counts update live as you work. Further information on these confidence scores for the fields can be found on [Understanding confidence scores](https://byron-bb7c63f4.mintlify.app/reviewing-data/confidence-scores) page.
 
     Two filters are worth a note:
 
@@ -31,16 +31,6 @@ Most preparers work a document in this order: jump to the **Review** filter firs
     2. **Corrected** shows every field you've changed from Byron's original extraction this session. Use it as a sanity check before approving — it's the fastest way to confirm you haven't introduced a typo in an edit.
   </Accordion>
 </AccordionGroup>
-
-## Approving fields
-
-Approvals work at two levels.
-
-**Field-level approval.** In an expanded section, each field has an approve control next to its value. Clicking it flips the field's status chip to `Validated` and marks the change in the audit log. Field-level approval is useful when you want to certify individual numbers as you go — for example, a partner's ending capital account that you've reconciled against last year's K-1.
-
-**Document-level approval.** The **Approve** button at the top of the right panel finalizes the whole document. Approving a document is what releases it into the rest of the filing and makes it available for export. You can approve without having approved every field individually — document-level approval is the common case, and field-level approval is for when you want a finer-grained trail.
-
-If you approve too quickly, you can reopen a document from the filing workspace at any point until export.
 
 ## Editing a field
 
@@ -69,10 +59,18 @@ Use **Reject** when the document doesn't belong in the filing at all — wrong c
   Don't use Reject for a single bad field — edit the field directly and approve the document instead.
 </Tip>
 
-## What's next
+## Approving fields
+
+Approvals work at two levels.
+
+**Field-level approval.** In an expanded section, each field has an approve control next to its value. Clicking it flips the field's status chip to `Validated` and marks the change in the audit log. Field-level approval is useful when you want to certify individual numbers as you go — for example, a partner's ending capital account that you've reconciled against last year's K-1.
+
+**Document-level approval.** The **Approve** button at the top of the right panel finalizes the whole document. Approving a document is what releases it into the rest of the filing and makes it available for export. You can approve without having approved every field individually — document-level approval is the common case, and field-level approval is for when you want a finer-grained trail.
+
+If you approve too quickly, you can reopen a document from the filing workspace at any point until export.What's next
 
 <CardGroup cols={2}>
-  <Card title="Understanding confidence score" icon="triangle-exclamation" href="/reviewing-extracted-data/validation-flags">
+  <Card title="Understanding confidence scores" icon="triangle-exclamation" href="/reviewing-data/confidence-scores">
     What each score means and how Byron decides to flag a field.
   </Card>
 
