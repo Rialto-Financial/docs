@@ -1,12 +1,30 @@
 ---
 title: "Excel or PDF export"
-description: "Download a self-contained Excel file with all extracted data."
+description: "When you want the reviewed data outside a tax-software import — a workpaper for a reviewer, a combined file for the client, or a spot-check copy."
 ---
 
-# Excel workbook download
+Not every export needs to land in Lacerte, CCH, etc. When you want the approved data as a standalone file — for a workpaper, a partner review, a client handoff, or a spot-check by a senior preparer — Byron offers two download destinations on the Create export dialog: **Excel** and **PDF**.
 
-Download a self-contained Excel file with all extracted data.
+The Approved status requirement from [Export overview](/exporting/overview) applies.
 
-<Note>
-  This page is still in progress. Check back soon, or [contact support](/help/contact-support) if you have questions.
-</Note>
+##  **When to Use Excel** Export
+
+- You use tax software other than CCH Axcess or Lacerte
+- You want to perform additional analysis or calculations before tax entry
+- You need a client-facing summary of all tax documents
+- You're preparing returns manually or using a custom workflow
+- You want a permanent reference copy of extracted data
+
+### What's in the workbook
+
+The workbook contains each document in the export alongside the detailed fields Byron extracted from it. You get the document type, the values that went into the tax-software export, and the context you'd want sitting next to those values when you're reviewing the return. Because every field is the reviewed, approved version, the workbook matches what shipped to Lacerte or CCH field-for-field — it's a reconciliation tool, not a separate source of truth.
+
+The workbook is generated dynamically from whatever documents you include in the batch. If you export a single K-1, the workbook covers that K-1. If you export a full client package, the workbook covers the package.
+
+### The K-1 aggregated view
+
+Byron's Excel workbook has a specific view built for K-1s: a single sheet that aggregates values across every K-1 in the batch. For a client with a handful of K-1s it's useful; for a client with forty K-1s — a partner in many partnerships, a trust with significant pass-through activity — it's the difference between reviewing each K-1 in isolation and seeing the full picture on one screen.
+
+<Warning>
+  **Important:** Changes made in the Excel file are not synced back to Byron. The Excel export is a point-in-time snapshot.
+</Warning>
