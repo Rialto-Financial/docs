@@ -12,21 +12,21 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
+          "anchor": "Our Demos",
           "icon": "book-open-cover",
-          "href": "https://mintlify.com/docs"
+          "href": "https://scribehow.com/viewer/How_to_Add_a_New_Filing_and_Process_it_with_Final_Export_to_CCH_Axcess__PSBeRm-vQlOai7Yk2egQeg?referrer=workspace"
         },
         {
           "anchor": "Blog",
           "icon": "newspaper",
-          "href": "https://mintlify.com/blog"
+          "href": "https://usebyron.com"
         }
       ]
     },
     "tabs": [
       {
         "tab": "Guide",
-        "groups": [
+        "pages": [
           {
             "group": "Getting started",
             "pages": [
@@ -74,9 +74,7 @@
             "pages": [
               "managing-firm/inviting-members",
               "managing-firm/roles-permissions",
-              "managing-firm/billing",
-              "managing-firm/seasonal-staff",
-              "managing-firm/notifications"
+              "managing-firm/seasonal-staff"
             ]
           },
           {
@@ -87,26 +85,21 @@
               "security/retention-deletion",
               "security/ai-and-data"
             ]
-          },
-          {
-            "group": "Help and support",
-            "pages": [
-              "help/faq",
-              "help/contact-support"
-            ]
           }
         ]
       },
       {
+        "tab": "Help and support",
+        "pages": [
+          "help/faq",
+          "help/contact-support"
+        ]
+      },
+      {
         "tab": "Changelog",
-        "groups": [
-          {
-            "group": "Changelog",
-            "pages": [
-              "changelog/release-notes",
-              "changelog/upcoming-features"
-            ]
-          }
+        "pages": [
+          "changelog/release-notes",
+          "changelog/upcoming-features"
         ]
       }
     ]
