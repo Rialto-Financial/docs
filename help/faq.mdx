@@ -1,12 +1,223 @@
 ---
-title: "FAQ"
-description: "Quick answers to the most common questions about Byron."
+title: "Frequently asked questions"
+description: "Common questions about how Byron processes tax documents, integrates with your tax software, and handles edge cases."
 ---
 
-# Frequently asked questions
+The questions below come from CPAs in onboarding, support conversations, and customer evaluations. If your question isn't covered here, the support contact at the bottom of the page will get you a quick answer.
 
-Quick answers to the most common questions about Byron.
+## General questions
 
-<Note>
-  This page is still in progress. Check back soon, or [contact support](/help/contact-support) if you have questions.
-</Note>
+<AccordionGroup>
+  <Accordion title="What is Byron?">
+    Byron is an AI-powered tax document processing platform that automates the extraction of data from tax forms with 98–99% accuracy. Byron integrates directly with CCH Axcess, Lacerte, and GoSystem, or exports to Excel, eliminating hours of manual data entry for accounting firms.
+
+    Byron processes complex documents including K-1 packages (with K-2, K-3, and state forms), W-2s, 1099s, and other tax forms, with a human-in-the-loop review workflow that confirms accuracy before export.
+  </Accordion>
+
+  <Accordion title="How does Byron differ from other tax automation tools?">
+    Byron is built specifically for the complex needs of modern accounting firms:
+
+    - **Higher accuracy.** Byron's agent reaches 98–99% extraction accuracy, compared to 75–85% for typical competing AI solutions.
+    - **Complex K-1 support.** Byron handles 120\+ page K-1 packages including K-2, K-3, and all state forms.
+    - **Field-level confidence.** Every field is sorted into High Confidence or Review, so you know which fields need closer attention.
+    - **Direct integrations.** Export to CCH Axcess, Lacerte, or GoSystem; download Excel workbooks or combined PDFs.
+    - **Built by CPAs.** The team includes experienced tax professionals who understand the workflow.
+  </Accordion>
+
+  <Accordion title="Do I need to install any software?">
+    No. Byron is a web-based platform accessible from any modern browser. You log in at your assigned URL — no installation required.
+
+    The one exception is if you use Lacerte and want to import data through Data Conductor, which requires a one-time configuration inside Lacerte. See [Export to Lacerte](/exporting/lacerte) for details.
+  </Accordion>
+
+  <Accordion title="How long does it take to process documents?">
+    Processing times vary by document complexity:
+
+    - **Simple forms (W-2, 1099):** 15–30 seconds
+    - **Standard K-1 packages:** 30–60 seconds
+    - **Complex K-1 packages (100\+ pages):** 2–3 minutes
+
+    Documents process asynchronously, so you can keep working while Byron handles them in the background. The filing workspace updates as documents move into Ready for Review.
+  </Accordion>
+</AccordionGroup>
+
+## Accuracy and processing
+
+<AccordionGroup>
+  <Accordion title='What does "98–99% extraction accuracy" mean?'>
+    Extraction accuracy is the percentage of fields that come out correctly without requiring manual correction, measured across all field types (text, numbers, dates, checkboxes) on every form Byron supports.
+
+    For context, manual data entry by humans typically achieves 90–97% accuracy, and competing AI solutions typically achieve 75–85%.
+
+    Even at 98–99%, Byron always recommends human review before export. The review workflow is designed to make that quick — high-confidence fields can be skimmed, while lower-confidence fields are surfaced for closer attention. See [Understanding confidence scores](/reviewing-extracted-data/understanding-confidence-scores) for how Byron decides what to flag.
+  </Accordion>
+
+  <Accordion title="What happens if the agent makes a mistake?">
+    The review workflow is designed to catch and correct extraction errors:
+
+    1. **Confidence buckets.** Fields are sorted into High Confidence, Review, and Corrected buckets to guide your attention.
+    2. **Side-by-side review.** The source document sits next to the extracted data, with anchors that take you to the exact source region for each field.
+    3. **Inline corrections.** Click any field to edit the value. You can add a comment explaining the change.
+    4. **Audit log.** Every correction is logged with who made the change, when, and why — used both for your firm's review trail and to improve the agent over time.
+  </Accordion>
+
+  <Accordion title="Can Byron handle poor-quality scans or handwritten documents?">
+    Yes, but confidence drops on harder source material. Byron is trained to handle:
+
+    - Slightly blurry or low-resolution scans (200 DPI minimum recommended)
+    - Skewed or rotated pages
+    - Documents with annotations or stamps
+    - Some handwritten numbers and text on otherwise printed forms
+
+    For best results, upload clear scans at 300 DPI or higher. If the source is very poor quality, the agent flags the affected fields for manual review.
+  </Accordion>
+
+  <Accordion title="Does Byron read footnotes and attachments on K-1s?">
+    Yes. K-1 processing includes:
+
+    - **Footnote analysis.** Byron extracts and interprets footnotes that affect field values.
+    - **Code parsing.** All Box 20 codes and their amounts are extracted.
+    - **K-3 forms.** Complete extraction of foreign tax information.
+    - **State forms.** All state K-1 variants are processed.
+    - **Attachment summaries.** Key information from attached statements is captured.
+
+    This is what makes K-1 packages work end-to-end — critical information buried in footnotes or supplemental schedules doesn't get missed.
+  </Accordion>
+</AccordionGroup>
+
+## Supported forms
+
+<AccordionGroup>
+  <Accordion title="What tax forms does Byron support?">
+    See [Supported tax document types](/uploading-documents/supported-docs) page for the full list. And, if you need a form that isn't listed, send sample data — Byron is built to add new forms quickly.
+  </Accordion>
+
+  <Accordion title="Does Byron support business tax returns (1065, 1120S)?">
+    Full business return processing is in development. Today, Byron can:
+
+    - **Process K-1s from business returns.** Byron fully supports all K-1 variants including partnership (1065), S-corp (1120S), and trust (1041).
+    - **Extract data from self-employed business documents.** Upload receipts and expense records for inclusion on Schedule C.
+
+    Full business return support — preparing Forms 1065, 1120S, and 1120, including book-to-tax adjustments and multi-state filing — is anticipated for the 2026 tax season.
+  </Accordion>
+
+  <Accordion title="Can Byron handle multiple K-1s for the same client?">
+    Yes — this is one of Byron's core strengths. You can:
+
+    - Upload multiple K-1 packages in a single batch.
+    - Process dozens of K-1s simultaneously (tested with 100\+ K-1s).
+    - Export all K-1s together to a summary Excel workbook.
+    - Import all K-1s at once to CCH Axcess, Lacerte, or GoSystem.
+
+    The Excel export includes a K-1 aggregated view that shows every K-1 in the batch on a single sheet, with working formulas — useful when a partner has interests in many partnerships.
+  </Accordion>
+</AccordionGroup>
+
+## Integrations
+
+<AccordionGroup>
+  <Accordion title="Which tax software does Byron integrate with?">
+    Direct integrations available today:
+
+    - **CCH Axcess Tax** — `.dat` file ready to import through Batch Manager.
+    - **Lacerte Tax** — per-filing iData handoff.
+    - **GoSystem Tax** — direct import into Thomson Reuters GoSystem.
+
+    Coming soon:
+
+    - **UltraTax CS**
+    - **Drake**
+
+    File-based options for any tax software:
+
+    - **Excel** — full workpaper workbook with per-document detail and an aggregated K-1 view.
+    - **Combined PDF** — every source document in the batch as a single download.
+
+    If your tax software isn't listed, let us know — Byron adds integrations based on customer demand.
+  </Accordion>
+
+  <Accordion title="Can Byron integrate with my practice management software?">
+    Byron supports integrations with practice management and document collection tools so client records and documents flow into the platform automatically. Specific integrations available for your firm vary — contact the team to confirm what's live for your account and what's on the integration roadmap.
+  </Accordion>
+
+  <Accordion title="How does the CCH Axcess integration work?">
+    The CCH Axcess integration uses a `.dat` file that you import into CCH on your side:
+
+    1. In Byron, select approved documents and click **Create export**.
+    2. Choose **CCH Axcess** as the destination and select the documents to include.
+    3. Click **Create export**. Byron generates the `.dat` file ready for pickup.
+    4. Import the file into the matching client in CCH Axcess.
+
+    See [Export to CCH Axcess](/exporting/cch-axcess) for the detailed step-by-step.
+  </Accordion>
+
+  <Accordion title="Is my data secure when integrating with CCH or Lacerte?">
+    Yes. Security measures include:
+
+    - **OAuth 2.0 authentication.** Secure, token-based access — no passwords stored.
+    - **Encrypted transmission.** All data transfers use TLS 1.3 encryption.
+    - **Minimal permissions.** Byron only requests permissions needed for import and export.
+    - **No persistent export storage.** Export files are generated on demand and not stored permanently.
+    - **Audit logging.** All integration activity is logged for compliance.
+
+    Byron's security practices align with IRS Publication 4557 and industry standards for tax data protection.
+  </Accordion>
+</AccordionGroup>
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title='My document is stuck in "Processing" status. What should I do?'>
+    Processing times vary by document complexity, but if a document has been processing for more than five minutes:
+
+    1. Refresh your browser to check whether the status has updated.
+    2. Check whether the document is unusually large (100\+ pages take longer).
+    3. Look for any error message on the document status panel.
+    4. If still stuck after ten minutes, contact support with the document ID.
+
+    Common causes of delayed processing include very large file sizes (10\+ MB PDFs), complex K-1 packages with extensive footnotes, and corrupted or password-protected PDFs.
+  </Accordion>
+
+  <Accordion title="The agent extracted incorrect data. How do I fix it?">
+    To correct extraction errors:
+
+    1. Open the document on the review screen.
+    2. Click on the incorrect field.
+    3. Enter the correct value.
+    4. Optionally add a comment explaining the change.
+    5. Approve the document to release the corrections into the filing.
+
+    Corrections show up as `Corrected` status chips on the relevant fields. The audit log tracks who made each change, when, and why — so a senior reviewer can always see what was edited and why.
+
+    See [Review process](/reviewing-extracted-data/review-process) for the full review workflow.
+  </Accordion>
+
+  <Accordion title="My CCH Axcess import failed. How do I troubleshoot?">
+    Common CCH import issues and solutions:
+
+    - **Client ID mismatch.** Verify the CCH client ID attached to the filing in Byron matches your CCH client exactly.
+    - **Validation errors.** Review the validation step in CCH for specific field issues.
+    - **`.dat` file not recognized.** Ensure the file wasn't corrupted during download.
+    - **Missing data after import.** Confirm you completed every step in the CCH import wizard.
+
+    For persistent issues, contact support with your export details and the team can help troubleshoot.
+  </Accordion>
+
+  <Accordion title="Documents from my document collection integration aren't syncing. Why?">
+    Check these common issues:
+
+    1. **Folder mapping.** Verify folders are correctly mapped in your integration settings.
+    2. **Upload completion.** Ensure files have finished uploading on the source side, not still syncing.
+    3. **File format.** Confirm files are in supported formats.
+    4. **Connection status.** Check that the integration shows Connected.
+    5. **Sync frequency.** Wait for the next sync cycle, or trigger a manual sync from the integration settings.
+  </Accordion>
+</AccordionGroup>
+
+## Still have questions?
+
+If you didn't find what you were looking for:
+
+- **Email support:** [support@usebyron.com](mailto:support@usebyron.com)
+
+The support team typically responds within 2–4 business hours during tax season (January–April) and within 24 hours during the off-season.
