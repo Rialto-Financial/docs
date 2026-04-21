@@ -22,7 +22,7 @@ The destination picker shows seven options, grouped into two categories.
 
   <Accordion title="File downloads.">
     - Excel produces a workbook you can open, review, or hand off to another tool. 
-    - PDF produces a combined download of the batch. 
+    - PDF produces a collated PDF of the batch — every source document combined into a single download. 
 
     Use these when you want the data outside a tax-software import — for a workpaper, a partner review, or a client handoff.
   </Accordion>
@@ -49,10 +49,10 @@ From the Client's workspace, click **Create an Export**. A dialog opens with thr
   <Step title="Step 1: Choose your destination">
     Pick where the documents should go: Lacerte, CCH Axcess, GoSystem, Excel, or PDF. UltraTax and Drake are Coming soon. 
   </Step>
-  <Step title="Step 2:">
+  <Step title="Step 2: Choose your format">
     Once a destination is selected, the format section opens. Here you can further pick the format if multiple exist and add Client ID if applicable.
   </Step>
-  <Step title="Step 3:">
+  <Step title="Step 3: Select your documents">
     The last section lists every Approved document in the filing. Check the ones you want in this batch.
   </Step>
 </Steps>
@@ -65,7 +65,7 @@ Every export carries the same underlying data regardless of destination. The fie
 
 <CardGroup cols={2}>
   <Card title="Export to Lacerte" icon="file-export" href="/exporting/lacerte">
-    Per-filing iData handoff into Lacerte Tax.
+    CSV export for Lacerte Data Conductor import.
   </Card>
 
   <Card title="Export to CCH Axcess" icon="file-export" href="/exporting/cch-axcess">
@@ -76,7 +76,7 @@ Every export carries the same underlying data regardless of destination. The fie
     Direct import into Thomson Reuters GoSystem.
   </Card>
 
-  <Card title="Download as Excel or PDF" icon="download" href="/exporting/excel-pdf">
-    Standalone workbook or combined PDF download.
+  <Card title="Download as Excel or PDF" icon="download" href="/exporting/external-document">
+    Standalone workbook or collated PDF download.
   </Card>
 </CardGroup>
