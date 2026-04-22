@@ -1,12 +1,97 @@
 ---
 title: "CCH Axcess"
-description: "Direct import from Byron into CCH Axcess Tax."
+description: "Export Byron's extracted data into CCH Axcess Return Manager using a .DAT file."
 ---
 
-# CCH Axcess Tax
-
-Direct import from Byron into CCH Axcess Tax.
+Byron exports to CCH Axcess as a `.dat` file. You download the file from Byron, then import it through CCH Axcess Return Manager — no profile setup required.
 
 <Note>
-  This page is still in progress. Check back soon, or [contact support](/help/contact-support) if you have questions.
+  If you run into problems during the export or import, reach out to [support@usebyron.com](mailto:support@usebyron.com).
 </Note>
+
+## Before you start
+
+Every document you want to export must be in **Approved** status. If anything in the filing is still in review, finish approving it first. See [Review process](/reviewing-data/review-process) for how to approve documents.
+
+## Exporting a filing into CCH Axcess
+
+Each export is two parts: download a `.dat` file from Byron, then import that file into CCH Axcess Return Manager.
+
+### Part A — download the .DAT file from Byron
+
+<Steps>
+  <Step title="Open the filing and create an export">
+    From the client's filing page, click **Create an Export** in the top-right corner.
+  </Step>
+  <Step title="Configure the export">
+    In the Configure Export dialog:
+
+    - Select **CCH Axcess** as the destination.
+    - Enter the **Client ID** — this must match the client ID in CCH Axcess.
+    - Select **Create CCH Tax File** as the export type.
+    - Choose which documents to include.
+  </Step>
+  <Step title="Initiate the export">
+    Click **Initiate Export** at the top or bottom of the dialog to start generating the `.dat` file.
+  </Step>
+  <Step title="Download the file">
+    The file usually takes 30 to 90 seconds to generate. When it's ready, click the **CCH Tax File (.dat)** link to download.
+  </Step>
+  <Step title="Save the file">
+    Save the `.dat` file somewhere you can find from CCH Axcess. The default Downloads folder is fine.
+  </Step>
+</Steps>
+
+<Warning>
+  Before you start the import, make sure the return is **not currently open** in CCH Axcess. The import will fail if Return Manager has the return loaded.
+</Warning>
+
+### Part B — import the .DAT file into CCH Axcess
+
+<Steps>
+  <Step title="Open Import in Return Manager">
+    In CCH Axcess Return Manager, click the **Utilities** menu, then select **Import** under the **Tax Data** section.
+
+    <Frame>
+      ![cch-step7-CL6n2JMi](/images/cch-step7-CL6n2JMi.png)
+    </Frame>
+  </Step>
+  <Step title="Browse for the .DAT file">
+    In the Import Tax Data dialog, click **Browse...** and navigate to the `.dat` file you downloaded from Byron.
+
+    <Frame>
+      ![cch-step8-DnmCIMdU](/images/cch-step8-DnmCIMdU.png)
+    </Frame>
+  </Step>
+  <Step title="Validate and import">
+    Click **Validate** to verify the file. Once validation completes successfully, click **Import** to process the data, then click **Finish**.
+
+    <Frame>
+      ![cch-step9a-DynhVmFD](/images/cch-step9a-DynhVmFD.png)
+    </Frame>
+
+    <Frame>
+      ![cch-step9b-BlGdDm3B](/images/cch-step9b-BlGdDm3B.png)
+    </Frame>
+
+    <Frame>
+      ![cch-step9c-DO52UjUA](/images/cch-step9c-DO52UjUA.png)
+    </Frame>
+  </Step>
+</Steps>
+
+<Tip>
+  After the import finishes, it usually takes a few seconds to a minute for the return to appear in Return Manager. Click **Refresh Grid** if you don't see it right away.
+</Tip>
+
+## What's next
+
+<CardGroup cols={2}>
+  <Card title="Export overview" icon="file-export" href="/exporting/overview">
+    Compare destinations and see what travels with every export.
+  </Card>
+
+  <Card title="Download as Excel or PDF" icon="file-arrow-down" href="/exporting/external-document">
+    Use Byron's Excel workpaper or collated PDF outside of a tax package.
+  </Card>
+</CardGroup>
