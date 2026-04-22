@@ -1,12 +1,157 @@
 ---
-title: "Lacerte Tax"
-description: "Direct import from Byron into Lacerte Tax."
+title: "Lacerte"
+description: "Export Byron's extracted data into Lacerte using Data Conductor."
 ---
 
-# Lacerte Tax
+Byron exports to Lacerte through the Data Conductor import system. Byron generates a CSV named after the client number, and Lacerte's Data Conductor reads that CSV into the tax return.
 
-Direct import from Byron into Lacerte Tax.
+There's a one-time setup to register an import profile in Lacerte. After that, every export is a two-step process: download the CSV from Byron, then import it through Data Conductor.
 
 <Note>
-This page is still in progress. Check back soon, or [contact support](/help/contact-support) if you have questions.
+  If you run into problems during setup, reach out to [support@usebyron.com](mailto:support@usebyron.com).
 </Note>
+
+## One-time setup: create the BYRON import profile
+
+You only need to do this once per Lacerte installation. The profile tells Data Conductor how to read the CSV files Byron produces.
+
+<Steps>
+  <Step title="Open Data Conductor">
+    In Lacerte, go to **Import → Data Conductor**.
+
+    <Frame>
+      ![lacerte-step1-CI7lpnak](/images/lacerte-step1-CI7lpnak.png)
+    </Frame>
+  </Step>
+  <Step title="Open Profile Manager">
+    Click **Profile Manager** in the toolbar, then click **Add** to create a new profile.
+
+    <Frame>
+      ![lacerte-step2-ni9-UB9E](/images/lacerte-step2-ni9-UB9E.png)
+    </Frame>
+  </Step>
+  <Step title="Select a sample CSV and file type">
+    Select a CSV file that you've already exported from Byron. The file name should be the client number (for example, `12345.csv`) — Data Conductor uses the file name to know which client the data belongs to.
+
+    Choose **Delimited** as the file type, then click **Next**.
+
+    <Frame>
+      ![lacerte-step3-DX3D\_\_JH](/images/lacerte-step3-DX3D__JH.png)
+    </Frame>
+  </Step>
+  <Step title="Configure delimiter settings">
+    Set the delimiter to **Comma** and the Text Qualifier to `"` (double quote). Click **Next**.
+
+    <Frame>
+      ![lacerte-step4-CFqZ-I3b](/images/lacerte-step4-CFqZ-I3b.png)
+    </Frame>
+  </Step>
+  <Step title="Assign categories in exact order">
+    Use the arrows to move categories from **Available Categories** into **Assigned Order**. The order must match exactly:
+
+    1. Account Number
+    2. Description
+    3. Current Year Balance
+    4. Prior Year Balance
+    5. Series
+    6. Prefix
+    7. Tax Code
+
+    Click **Next** when complete.
+
+    <Frame>
+      ![lacerte-step5-D0XTGryW](/images/lacerte-step5-D0XTGryW.png)
+    </Frame>
+  </Step>
+  <Step title="Name the profile and finish">
+    Enter `BYRON` as the **Vendor Profile Name** and `1.0` as the **Version Number**. Click **Finish**.
+
+    <Frame>
+      ![lacerte-step6-Cda0wxAU](/images/lacerte-step6-Cda0wxAU.png)
+    </Frame>
+  </Step>
+</Steps>
+
+Setup is done. The BYRON profile will now appear under Custom Profiles for every future import.
+
+## Exporting a filing into Lacerte
+
+Once the profile exists, every Lacerte export is two parts: download the CSV from Byron, then run it through Data Conductor.
+
+### Part A — download the CSV from Byron
+
+<Steps>
+  <Step title="Open the filing and create an export">
+    Navigate to the client's filing page and click **Create an Export** in the top-right corner.
+  </Step>
+  <Step title="Configure the export">
+    In the Configure Export dialog:
+
+    - Select **Lacerte** as the destination.
+    - Enter the **Client No.** — this must match the client number in Lacerte.
+    - Choose which documents to include.
+  </Step>
+  <Step title="Initiate the export">
+    Click **Initiate Export** at the top or bottom of the dialog.
+  </Step>
+  <Step title="Download the CSV">
+    Click the export file to download it. Save it somewhere you can find from Lacerte.
+  </Step>
+</Steps>
+
+<Tip>
+  Byron names the CSV after the client number you entered. Data Conductor uses that file name to figure out which client to import into, so don't rename the file before importing.
+</Tip>
+
+### Part B — import the CSV into Lacerte
+
+<Steps>
+  <Step title="Open Data Conductor and start the import">
+    In Lacerte, go to **Import → Data Conductor**. Select **Import Other Accounting Package Data** and click **Next**.
+
+    <Frame>
+      ![lacerte-import-1-MoM3kdzk](/images/lacerte-import-1-MoM3kdzk.png)
+    </Frame>
+  </Step>
+  <Step title="Select the BYRON profile and your file">
+    Under **Custom Profiles**, choose **BYRON** and click **Next**. Browse to and select the CSV you downloaded from Byron.
+
+    <Frame>
+      ![lacerte-import-2-Bdv4NhjR](/images/lacerte-import-2-Bdv4NhjR.png)
+    </Frame>
+
+    <Frame>
+      ![lacerte-import-2b-DMwogTnA](/images/lacerte-import-2b-DMwogTnA.png)
+    </Frame>
+  </Step>
+  <Step title="Import the client">
+    Confirm the CSV appears under **Clients to Import**, then click **Finish** to complete the import.
+
+    <Frame>
+      ![lacerte-import-3-DJN-TEql](/images/lacerte-import-3-DJN-TEql.png)
+    </Frame>
+  </Step>
+  <Step title="Transfer the data into the return">
+    Select the client and click the **Transfer** button to move the data from Data Conductor's Working Trial Balance into the actual Lacerte return.
+
+    <Frame>
+      ![lacerte-import-4-jzup66VB](/images/lacerte-import-4-jzup66VB.png)
+    </Frame>
+  </Step>
+</Steps>
+
+<Warning>
+  The import only loads the data into Data Conductor's staging area. You have to click **Transfer** to move it into the Lacerte return — without that step, nothing reaches the actual filing.
+</Warning>
+
+## What's next
+
+<CardGroup cols={2}>
+  <Card title="Export overview" icon="file-export" href="/exporting/overview">
+    Compare destinations and see what travels with every export.
+  </Card>
+
+  <Card title="Download as Excel or PDF" icon="file-arrow-down" href="/exporting/external-document">
+    Use Byron's Excel workpaper or collated PDF outside of a tax package.
+  </Card>
+</CardGroup>
