@@ -7,7 +7,7 @@ Not every export needs to land in Lacerte, CCH, etc. When you want the approved 
 
 The Approved status requirement from [Export overview](/exporting/overview) applies.
 
-##  **When to Use Excel** Export
+## **When to Use Excel** Export
 
 - You use tax software other than CCH Axcess, Lacerte, or GoSystem
 - You want to perform additional analysis or calculations before tax entry
@@ -17,13 +17,21 @@ The Approved status requirement from [Export overview](/exporting/overview) appl
 
 ### What's in the workbook
 
-The workbook contains each document in the export alongside the detailed fields Byron extracted from it. You get the document type, the values that went into the tax-software export, and the context you'd want sitting next to those values when you're reviewing the return. Because every field is the reviewed, approved version, the workbook matches what shipped to Lacerte, CCH, or GoSystem field-for-field — it's a reconciliation tool, not a separate source of truth.
+The workbook contains each document in the export alongside the detailed fields Byron extracted from it. 
 
 The workbook is generated dynamically from whatever documents you include in the batch. If you export a single K-1, the workbook covers that K-1. If you export a full client package, the workbook covers the package.
 
+### Basic Excel workpaper
+
+All non-K1 documents, e.g.  W-2s, 1099s, 1098s, etc. can be exported into Excel file containing  a summary page and detailed tabs for each document.
+
 ### The K-1 aggregated view
 
-Byron's Excel workbook has a specific view built for K-1s: a single sheet that aggregates values across every K-1 in the batch. For a client with a handful of K-1s it's useful; for a client with forty K-1s — a partner in many partnerships, a trust with significant pass-through activity — it's the difference between reviewing each K-1 in isolation and seeing the full picture on one screen.
+Byron's Excel workbook has a specific view built for K-1s: a single sheet that aggregates values across every K-1 in the batch, e.g.:
+
+- **K1 (1065) Workpaper:** Partnership K1s and associated state K1s
+- **K1 (1120S) Workpaper:** S-Corporation K1s and associated state K1s
+- **K1 (1041) Workpaper:** _Coming Soon_
 
 <Warning>
   **Important:** Changes made in the Excel file are not synced back to Byron. The Excel export is a point-in-time snapshot.
