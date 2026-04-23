@@ -89,9 +89,13 @@ Byron supports multiple types of integration for automatic syncing of files.
   <Accordion title="Karbon Integration" icon="arrow-down-to-square">
     Karbon integration syncs work items and client records, enabling automated project creation.
 
-    #### **Automatic Project Creation**
+    #### Connect Karbon to sync client records, work items, and task status.
 
-    When Karbon is connected, Byron can automatically create projects from Karbon work items. Configure mapping rules in Settings → Integrations → Karbon.
+    1. Navigate to Settings → Integrations → Karbon
+    2. Click "Connect Karbon"
+    3. Enter your Karbon organization URL
+    4. Authorize the connection with your Karbon credentials
+    5. Select which workflows should sync to Byron
   </Accordion>
 </AccordionGroup>
 
@@ -151,7 +155,19 @@ While a document is in **Processing**, the agent is doing several things:
 - Reading every field — including handwritten corrections and annotations — and assigning a confidence score to each one.
 - Flagging anything that looks off, so it's surfaced at the top of the review queue.
 
-For how those confidence scores are calculated and what they mean, see [Understanding confidence scores](/reviewing-data/confidence-scores).
+## If a document fails to upload or process:
+
+1. Check the error message in the document status panel
+2. Common issues and solutions:
+   - **File too large:** Compress PDF or split into smaller files
+   - **Unsupported format:** Convert to PDF before uploading
+   - **Corrupted file:** Re-scan or re-download the original document
+   - **Poor image quality:** Re-scan at higher resolution (300 DPI minimum)
+3. Re-upload the corrected document
+
+<Info>
+  If you have questions or need assistance, please contact our support team at [support@usebyron.com](mailto:support@usebyron.com).
+</Info>
 
 ## What's next
 
