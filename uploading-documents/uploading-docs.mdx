@@ -9,11 +9,21 @@ Once you've created a filing, the next step is getting documents into it. Byron 
 
 Byron provides multiple methods for uploading client data and tax documents. Whether you prefer manual control, automated syncing, or a hybrid approach, you can choose the upload method that best fits your workflow.
 
+Byron accepts PDFs and Excel files (.xlsx). For the full list, see [Supported formats](https://byron-bb7c63f4.mintlify.app/uploading-documents/supported-formats).
+
+<Tip>
+  You don't need to split a client package into separate files before uploading. Byron will identify and separate each document inside a multi-form PDF on its own.
+</Tip>
+
+## Automatic upload options
+
+Byron supports multiple types of integration for automatic syncing of files.
+
 <AccordionGroup>
-  <Accordion title="Automatic uploads with Dropbox Integration">
+  <Accordion title="Dropbox Integration">
     Automate document upload by syncing Byron with your existing document management and client portal systems.
 
-    ### **Dropbox Sync**
+    **Dropbox Sync**
 
     Dropbox integration enables automatic document ingestion from specified folders.
 
@@ -50,7 +60,7 @@ Byron provides multiple methods for uploading client data and tax documents. Whe
     </Note>
   </Accordion>
 
-  <Accordion title="Automatic uploads with Truss Integration">
+  <Accordion title="Truss Integration">
     Truss integration automatically imports documents uploaded by clients through their portal.
 
     #### **Setup Truss Sync**
@@ -76,30 +86,24 @@ Byron provides multiple methods for uploading client data and tax documents. Whe
     </Tip>
   </Accordion>
 
-  <Accordion title="Automatic uploads with Karbon Integration">
+  <Accordion title="Karbon Integration">
     Karbon integration syncs work items and client records, enabling automated project creation.
 
     #### **Automatic Project Creation**
 
     When Karbon is connected, Byron can automatically create projects from Karbon work items. Configure mapping rules in Settings → Integrations → Karbon.
   </Accordion>
+</AccordionGroup>
 
-  <Accordion title="Manual uploads">
-    ## Two ways to upload files manually
+## Manual upload options
 
-    From inside a filing, you can add documents in either of two ways:
+From inside a filing, you can add documents in either of two ways:
 
-    - **Drag and drop** one or more files directly onto the filing workspace.
-    - **Click Upload** and choose files from your computer.
+- **Drag and drop** one or more files directly onto the filing workspace.
+- **Click Upload** and choose files from your computer.
 
-    Byron accepts PDFs and Excel files (.xlsx). For the full list, see [Supported formats](https://byron-bb7c63f4.mintlify.app/uploading-documents/supported-formats).
-
-    <Tip>
-      You don't need to split a client package into separate files before uploading. Byron will identify and separate each document inside a multi-form PDF on its own.
-    </Tip>
-
-    ## Upload a single document
-
+<AccordionGroup>
+  <Accordion title="Upload a single document">
     Uploading one form at a time is the fastest way to get a quick extraction — useful when a client sends you a single W-2 or corrected 1099 partway through the season.
 
     <Steps>
@@ -116,9 +120,9 @@ Byron provides multiple methods for uploading client data and tax documents. Whe
         Once the status changes to **Ready for Review**, click the document to open the [review screen](https://byron-bb7c63f4.mintlify.app/reviewing-data/review-screen).
       </Step>
     </Steps>
+  </Accordion>
 
-    ## Upload a full client package
-
+  <Accordion title="Upload a full client package">
     Most firms receive an entire year's worth of documents from a client as one bundle — sometimes a single scanned PDF, sometimes a folder of separate files. You can drop the whole package into Byron at once.
 
     <Steps>
