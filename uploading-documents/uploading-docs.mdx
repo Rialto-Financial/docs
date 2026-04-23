@@ -5,56 +5,138 @@ description: "Add tax documents to a filing one at a time or as a full client pa
 
 Once you've created a filing, the next step is getting documents into it. Byron handles both one-off uploads and full client packages — you don't need to sort or label anything first. The agent reads each document, figures out what it is, and routes it to the right place in the filing.
 
-## Two ways to upload
+## Automatic and manual uploads
 
-From inside a filing, you can add documents in either of two ways:
+Byron provides multiple methods for uploading client data and tax documents. Whether you prefer manual control, automated syncing, or a hybrid approach, you can choose the upload method that best fits your workflow.
 
-- **Drag and drop** one or more files directly onto the filing workspace.
-- **Click Upload** and choose files from your computer.
+<AccordionGroup>
+  <Accordion title="Automatic uploads with Dropbox Integration">
+    Automate document upload by syncing Byron with your existing document management and client portal systems.
 
-Byron accepts PDFs and Excel files (.xlsx). For the full list, see [Supported formats](/uploading-documents/supported-formats).
+    ### **Dropbox Sync**
 
-<Tip>
-  You don't need to split a client package into separate files before uploading. Byron will identify and separate each document inside a multi-form PDF on its own.
-</Tip>
+    Dropbox integration enables automatic document ingestion from specified folders.
 
-## Upload a single document
+    #### **Setup Dropbox Sync**
 
-Uploading one form at a time is the fastest way to get a quick extraction — useful when a client sends you a single W-2 or corrected 1099 partway through the season.
+    1. Complete the Dropbox integration setup (see Onboarding guide)
+    2. Create a folder structure in Dropbox:
+       ```text
+       /Acacia Tax Documents/
+         /2024/
+           /Client Name 1/
+           /Client Name 2/
+       ```
+    3. In Byron, navigate to Settings \> Integrations \> Dropbox
+    4. Click "Configure Sync Folders"
+    5. Map Dropbox folders to Byron projects
+    6. Set sync frequency (real-time, hourly, or daily)
 
-<Steps>
-  <Step title="Open the filing">
-    From the Dashboard, click into the client and filing you want to add the document to.
-  </Step>
-  <Step title="Add the file">
-    Drag the document onto the filing workspace, or click **Upload** and select it.
-  </Step>
-  <Step title="Wait for processing">
-    The document moves to **Processing** while Byron classifies it and extracts its fields. Simple forms like W-2s and 1099s are usually ready in under a minute. Denser forms like K-1s can take a few minutes.
-  </Step>
-  <Step title="Review when it's ready">
-    Once the status changes to **Ready for Review**, click the document to open the [review screen](/reviewing-data/review-screen).
-  </Step>
-</Steps>
+    <Tip>
+      **Best Practice:** Use a consistent folder structure where each client has their own subfolder. This enables automatic project matching.
+    </Tip>
 
-## Upload a full client package
+    #### **How Dropbox Sync Works**
 
-Most firms receive an entire year's worth of documents from a client as one bundle — sometimes a single scanned PDF, sometimes a folder of separate files. You can drop the whole package into Byron at once.
+    Once configured, Byron monitors your Dropbox folders:
 
-<Steps>
-  <Step title="Select every file in the package">
-    Drag the full set onto the filing, or select them all from the upload dialog.
-  </Step>
-  <Step title="Let Byron classify and split">
-    Byron reads the contents of each file, identifies the form type (W-2, 1099-INT, 1099-DIV, K-1, brokerage statement, etc.), and separates combined PDFs into individual documents automatically.
-  </Step>
-  <Step title="Processing runs in parallel">
-    Documents are processed at the same time, not one after another. Simpler forms will finish first and appear as **Ready for Review** while longer forms are still being extracted.
-  </Step>
-  <Step title="Work through the filing">
-    You can start reviewing completed documents immediately — there's no need to wait for the entire package to finish.
-  </Step>
-</Steps>
+    1. When a new file is added to a synced folder, Byron detects it within minutes
+    2. The file is automatically downloaded and associated with the matching project
+    3. Document processing begins immediately
+    4. You receive a notification when processing is complete
+
+    <Note>
+      **Important:** Documents are not deleted from Dropbox after sync. They remain in Dropbox and are also stored in Byron.
+    </Note>
+  </Accordion>
+
+  <Accordion title="Automatic uploads with Truss Integration">
+    Truss integration automatically imports documents uploaded by clients through their portal.
+
+    #### **Setup Truss Sync**
+
+    1. Complete the Truss integration setup (see Onboarding guide)
+    2. In Truss, create a project for the client
+    3. In Byron, link the Truss project to an Acacia project:
+       - Navigate to the project in Byron
+       - Click "Link External Project"
+       - Select the corresponding Truss project
+    4. Configure which document types should auto-sync
+
+    #### **Client Upload Process via Truss**
+
+    1. Client logs into their Truss portal
+    2. Client uploads documents in response to document requests
+    3. Documents automatically sync to Byron when marked "Approved" in Truss
+    4. Processing begins immediately in Byron
+    5. Preparer receives notification of new documents
+
+    <Tip>
+      \*\*Best Practice: \*\*Use Truss document requests to guide clients to upload specific forms. This reduces processing errors and ensures you receive all necessary documents.
+    </Tip>
+  </Accordion>
+
+  <Accordion title="Automatic uploads with Karbon Integration">
+    Karbon integration syncs work items and client records, enabling automated project creation.
+
+    #### **Automatic Project Creation**
+
+    When Karbon is connected, Byron can automatically create projects from Karbon work items. Configure mapping rules in Settings → Integrations → Karbon.
+  </Accordion>
+
+  <Accordion title="Manual uploads">
+    ## Two ways to upload files manually
+
+    From inside a filing, you can add documents in either of two ways:
+
+    - **Drag and drop** one or more files directly onto the filing workspace.
+    - **Click Upload** and choose files from your computer.
+
+    Byron accepts PDFs and Excel files (.xlsx). For the full list, see [Supported formats](https://byron-bb7c63f4.mintlify.app/uploading-documents/supported-formats).
+
+    <Tip>
+      You don't need to split a client package into separate files before uploading. Byron will identify and separate each document inside a multi-form PDF on its own.
+    </Tip>
+
+    ## Upload a single document
+
+    Uploading one form at a time is the fastest way to get a quick extraction — useful when a client sends you a single W-2 or corrected 1099 partway through the season.
+
+    <Steps>
+      <Step title="Open the filing">
+        From the Dashboard, click into the client and filing you want to add the document to.
+      </Step>
+      <Step title="Add the file">
+        Drag the document onto the filing workspace, or click **Upload** and select it.
+      </Step>
+      <Step title="Wait for processing">
+        The document moves to **Processing** while Byron classifies it and extracts its fields. Simple forms like W-2s and 1099s are usually ready in under a minute. Denser forms like K-1s can take a few minutes.
+      </Step>
+      <Step title="Review when it's ready">
+        Once the status changes to **Ready for Review**, click the document to open the [review screen](https://byron-bb7c63f4.mintlify.app/reviewing-data/review-screen).
+      </Step>
+    </Steps>
+
+    ## Upload a full client package
+
+    Most firms receive an entire year's worth of documents from a client as one bundle — sometimes a single scanned PDF, sometimes a folder of separate files. You can drop the whole package into Byron at once.
+
+    <Steps>
+      <Step title="Select every file in the package">
+        Drag the full set onto the filing, or select them all from the upload dialog.
+      </Step>
+      <Step title="Let Byron classify and split">
+        Byron reads the contents of each file, identifies the form type (W-2, 1099-INT, 1099-DIV, K-1, brokerage statement, etc.), and separates combined PDFs into individual documents automatically.
+      </Step>
+      <Step title="Processing runs in parallel">
+        Documents are processed at the same time, not one after another. Simpler forms will finish first and appear as **Ready for Review** while longer forms are still being extracted.
+      </Step>
+      <Step title="Work through the filing">
+        You can start reviewing completed documents immediately — there's no need to wait for the entire package to finish.
+      </Step>
+    </Steps>
+  </Accordion>
+</AccordionGroup>
 
 ## What Byron does while processing
 
