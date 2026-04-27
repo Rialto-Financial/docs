@@ -9,7 +9,8 @@ The setup is three steps:
 
 1. Create your firm account
 2. Connect your tax preparation software
-3. Invite your team
+3. Set up other integrations, such as practice management software, storage, etc.
+4. Invite your team
 
 <Note>
   You can skip any step and come back to it later. The only thing you need before processing your first document is a firm account. If you've already received an invite from a colleague, see [Joining your firm on Byron](/getting-started/joining-your-firm) instead.
@@ -27,11 +28,11 @@ Go to [app.usebyron.com](https://app.usebyron.com) and sign up. During signup yo
   Every Byron account can export to a **Full Workpaper** (Excel) and a **Collated PDF**, regardless of which tax software you select. A direct tax-software integration is optional, not required.
 </Note>
 
-Once your firm is created, you'll land on your dashboard.
+Once your firm is created, you'll land on your dashboard. → _comment: shall we add a step 4 or our direct onboarding support loop to differentiate the registration of admin users?_
 
 ## Step 2: Connect your tax preparation software
 
-Byron exports extracted data directly into your tax prep software. Setup is a one-time configuration per platform.
+Byron integrates with your existing tools to create a seamless workflow from client onboarding through tax filing. Setup is a one-time configuration per platform.
 
 <AccordionGroup>
   <Accordion title="Lacerte" icon="gear" iconType="regular">
@@ -46,9 +47,9 @@ Byron exports extracted data directly into your tax prep software. Setup is a on
     See the [Lacerte  guide](/exporting/lacerte) for the full in-depth walkthrough.
   </Accordion>
 
-    <Accordion title="CCH Axcess Tax" icon="gear-complex">
+  <Accordion title="CCH Axcess Tax" icon="gear-complex">
     Byron connects to CCH Axcess via
-    
+
     Several ways to establish direct integration with CCH Axcess, including through OAuth authentication and API connections if your organization has a dedicated CCH Axcess API; most customers import client data via .DAT file imports. You'll need your CCH account number and admin access in CCH.
 
     1. Go to **Settings → Integrations → CCH Axcess**
@@ -73,23 +74,71 @@ Byron exports extracted data directly into your tax prep software. Setup is a on
   Always run a test export before tax season opens. Catching a misconfiguration and fixing it ahead of time is a lot easier than doing it during a busy week.
 </Tip>
 
-## Step 3: Invite your team
+## Step 3: Set up other integrations
+
+To allow your organization to manage its workflow seamlessly, Byron also supports other integrations. As an administrator for your organization, you can configure and manage these integrations by following the steps below as needed.
+
+<AccordionGroup>
+  <Accordion title="Practice Management Integration - Karbon">
+    Connect Karbon to sync client records, work items, and task status.
+
+    1. Navigate to Settings \> Integrations \> Karbon
+    2. Click "Connect Karbon"
+    3. Enter your Karbon organization URL
+    4. Authorize the connection with your Karbon credentials
+    5. Select which workflows should sync to Byron
+  </Accordion>
+
+  <Accordion title="Document Storage Integration - Dropbox">
+    Link Dropbox for automatic document ingestion and storage.
+
+    1. Navigate to Settings \> Integrations \> Dropbox
+    2. Click "Connect Dropbox"
+    3. Authorize Acacia AI to access your Dropbox
+    4. Select the folders that contain client tax documents
+    5. Configure automatic sync settings
+
+    <Note>
+      Ensure your Dropbox folder structure is organized by client or return year for optimal automatic processing.
+    </Note>
+  </Accordion>
+
+  <Accordion title="Client Portal Integration - Truss">
+    Connect Truss for automated client document collection and e-signatures.
+
+    1. Navigate to Settings \> Integrations \> Truss
+    2. Click "Connect Truss"
+    3. Enter your Truss API credentials
+    4. Map Truss projects to Acacia AI client records
+    5. Configure document upload notifications
+  </Accordion>
+</AccordionGroup>
+
+<Card title="Integration Status Dashboard" icon="traffic-light">
+  After configuring integrations, monitor their status from the Integrations Dashboard:
+
+  - **Green indicator:** Integration is active and syncing
+  - **Yellow indicator:** Integration requires attention or re-authentication
+  - **Red indicator:** Integration has failed and needs reconfiguration
+</Card>
+
+## Step 4: Invite your team
 
 Add the people who'll be uploading, reviewing, or approving documents this season.
 
 <Steps>
-  <Step title="Open the organization switcher">
-    Find the organization switcher in the sidebar.
+  <Step title="Click on your organization name  ">
+    Find the organization settings in the top right corner.
   </Step>
   <Step title="Manage or invite members">
-    Select **Manage members** or **Invite members**.
+    Select  "Team Members" from the dropdown menu
   </Step>
   <Step title="Send the invite">
     Enter the person's email and assign a role. They'll receive an invite email with a link to set up their account.
   </Step>
 </Steps>
 
-For what each role can and can't do, see [Roles and permissions](/managing-firm/roles-permissions). If you're bringing on seasonal preparers, see [Onboarding seasonal staff](/managing-firm/seasonal-staff).
+For what each role can and can't do and further info on user management, see [Managing team members](/managing-firm/managing-members).
 
 ## What's next
 
@@ -99,6 +148,7 @@ Your firm is ready. The fastest way to confirm everything works is to walk throu
   <Card title="Quick start: your first document" icon="play" href="/getting-started/first-document">
     Walk through Byron with a single document.
   </Card>
+
   <Card title="Joining your firm on Byron" icon="user-plus" href="/getting-started/joining-your-firm">
     Send this link to teammates once you've invited them.
   </Card>
