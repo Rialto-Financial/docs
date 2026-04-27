@@ -32,7 +32,7 @@
             "pages": [
               "getting-started/welcome-page",
               "getting-started/how-byron-works-page",
-              "getting-started/account-setup",
+              "getting-started/org-setup",
               "getting-started/invited-users",
               "getting-started/first-document"
             ]
