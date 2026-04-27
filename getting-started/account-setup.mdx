@@ -6,8 +6,8 @@ description: "Get your Byron account ready in a few minutes — create your orga
 Setting up Byron takes only 4 steps which you can complete in less than 10 minutes. Once setup is complete, your firm is ready to upload its first document.
 
 1. Create your Byron account
-2. Configure your organization settings
-3. Connect your tax preparation software
+2. Connect your tax preparation software
+3. TBC
 4. Invite your team
 
 <Note>
@@ -22,7 +22,7 @@ Visit [app.usebyron.com](https://app.usebyron.com) and sign up. During signup, y
 
 - **Firm name** — what your team and clients will see across Byron
 - **Primary contact** — name and email of the person managing the account
-- **Tax preparation software** — Lacerte, CCH Axcess, UltraTax, or Other (you can change this later)
+- **Tax preparation software** — tax software you'd like to connect, e.g. Lacerte, CCH Axcess, UltraTax, or Other (you can change this later)
 
 <Note>
   Every Byron account can export to a **Full Workpaper** (Excel) and **Collated PDF**, regardless of which tax software you select. A direct tax software integration is optional — not required — to use Byron.
@@ -30,20 +30,7 @@ Visit [app.usebyron.com](https://app.usebyron.com) and sign up. During signup, y
 
 Once your firm is created, you'll land on your dashboard.
 
-## Step 2: Configure your firm settings
-
-From the dashboard, open **Settings → Firm** and complete the following. These details are reused across exports, audit logs, and team invites, so filling them in now saves time later.
-
-- **Firm details** — firm name, EIN, jurisdiction, and licensing information
-- **Branding** — upload your firm's logo to appear on exports and client-facing materials
-- **Default workflows** — set the default approval and review behavior for your firm (you can override these per client)
-- **Notifications** — choose how and when team members are alerted to new documents, completed extractions, or pending reviews
-
-<Tip>
-  If multiple people at your firm will be configuring settings, decide up front who owns notifications and default workflows. Inconsistent defaults cause confusion during peak season.
-</Tip>
-
-## Step 3: Connect your tax preparation software
+## Step 2: Connect your tax preparation software
 
 Byron exports extracted data directly into your tax prep software — no reformatting, no manual re-entry. Setup is a one-time configuration per platform.
 
@@ -51,7 +38,7 @@ Open **Settings → Integrations** and follow the steps for your software.
 
 <AccordionGroup>
   <Accordion title="Lacerte" icon="gear" iconType="regular">
-    Byron exports to Lacerte using a configuration file you import once into Lacerte's Data Conductor. After that, Byron-generated exports drop straight into the right client return.
+    Lacerte integration uses the Data Conductor import system for seamless data transfer.
 
     1. Go to **Settings → Integrations → Lacerte**
     2. Click **Configure Lacerte export**
@@ -63,7 +50,9 @@ Open **Settings → Integrations** and follow the steps for your software.
   </Accordion>
 
   <Accordion title="CCH Axcess Tax" icon="gear-complex">
-    Byron connects to CCH Axcess via OAuth. You'll need your CCH account number and admin access in CCH.
+    Byron connects to CCH Axcess via
+    
+    Several ways to establish direct integration with CCH Axcess, including through OAuth authentication and API connections if your organization has a dedicated CCH Axcess API; most customers import client data via .DAT file imports. You'll need your CCH account number and admin access in CCH.
 
     1. Go to **Settings → Integrations → CCH Axcess**
     2. Click **Connect CCH Axcess**
@@ -78,31 +67,7 @@ Open **Settings → Integrations** and follow the steps for your software.
     See the [CCH Axcess  guide](/exporting/cch-axcess) for the full in-depth walkthrough.
   </Accordion>
 
-    <Accordion title="GoSystem Tax" icon="gear">
-    Byron exports to GoSystem Tax RS via an Excel workbook you import directly into GoSystem.
-
-    1. Go to **Settings → Integrations → GoSystem**
-    2. Click **Configure GoSystem export**
-    3. Run a test export from Byron to confirm the connection
-
-    See the [GoSystem export guide](/exporting/gosystem) for the full walkthrough.
-  </Accordion>
-
-  <Accordion title="UltraTax CS" icon="gear">
-    A direct integration for UltraTax CS is **coming soon**. In the meantime, you can still use Byron by exporting to a **Full Workpaper** (Excel) or **Collated PDF**.
-
-    [Let us know](mailto:support@usebyron.com) which platform you use so we can prioritize.
-  </Accordion>
-
-  <Accordion title="Drake Tax" icon="gear">
-    A direct integration for Drake Tax is **coming soon**. In the meantime, you can still use Byron by exporting to a **Full Workpaper** (Excel) or **Collated PDF**.
-
-    [Let us know](mailto:support@usebyron.com) which platform you use so we can prioritize.
-  </Accordion>
-
   <Accordion title="Something else" icon="gear">
-    Don't see your tax software? Byron's **Full Workpaper** export is designed for direct use with any prep workflow.
-
     If you use a tax platform not listed here, [email us](mailto:support@usebyron.com) — we're continuously adding integrations based on customer demand.
   </Accordion>
 </AccordionGroup>
