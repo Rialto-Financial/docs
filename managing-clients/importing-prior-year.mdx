@@ -7,19 +7,15 @@ Byron works best when it knows what your firm already had in Lacerte or CCH Axce
 
 You bring in prior year data once, at setup, and Byron reuses it every season after that. How you do it depends on which tax software your firm uses.
 
-## Which import path applies
+<Note>
+  Before you begin, confirm that your organization administrator had set up relevant integrations to your tax preparation software. See [Setting up your organization page](/getting-started/org-setup) for further information
+</Note>
 
 **CCH Axcess firms** do a one-time bulk export of every pro forma return for the current tax year, packaged as a `.dat` file. Byron ingests it, populates all your rolled-forward clients into the client list with a **Rolled Forward** status, and keeps the CCH client IDs attached so exports land on the right returns.
 
 **Lacerte firms** use a file called iData, delivered per filing. There's no bulk import step — each filing you start brings its own iData at export time, which is what gives Byron the basis tracking and naming continuity for that client.
 
 ## CCH Axcess: one-time bulk import
-
-Do this once at setup. You can import every pro forma 1040 in a single pass, or go client-by-client if you'd rather roll out Byron gradually.
-
-<Note>
-  Before you export, make sure the clients you want to bring over are already rolled forward to the current tax year in CCH. Byron populates existing rolled-forward CCH records — it doesn't create new ones.
-</Note>
 
 ### Export from CCH
 
