@@ -1,12 +1,48 @@
 ---
 title: "AI and your data"
-description: "Byron does not use your client data to train AI models — here's how that works."
+description: "How Byron's agent uses your data — and what it doesn't do with it."
 ---
 
-# AI and your data
-
-Byron does not use your client data to train AI models — here's how that works.
+Byron is built on AI. Every document that lands in your filings is read, classified, and extracted by an agent that combines outputs from multiple models. That makes it fair to ask exactly what happens to your client data inside the system. 
 
 <Note>
-This page is still in progress. Check back soon, or [contact support](/help/contact-support) if you have questions.
+  The same security and confidentiality controls described in [How we protect client data](/security/data-protection) apply to AI processing. Customer documents are classified at our highest internal tier and handled accordingly throughout the agent's pipeline.
 </Note>
+
+## What we don't do
+
+<CardGroup cols={2}>
+  <Card title="We don't train on your client data" icon="ban">
+    Your client documents are not used to train, fine-tune, or otherwise improve Byron's models. The data your firm uploads is used only to extract the values for your own filings.
+  </Card>
+
+  <Card title="Your data stays inside Byron's environment" icon="shield-check">
+    Customer documents are processed inside our production environment under the same access controls, encryption, and isolation that apply to all customer data. We don't use customer data in non-production or development environments.
+  </Card>
+</CardGroup>
+
+## What we do
+
+Byron's agent doesn't run a single extraction pass on each document. For every form, multiple models read the same source independently and return their own version of every field. The agent then compares those answers field by field — where they agree, confidence is high and the field is marked ready; where they disagree, the field is surfaced for your review.
+
+That comparison is what produces the confidence scores you see in the review screen, and it's why the agent surfaces specific fields for your attention rather than simply reporting one model's guess as fact.
+
+For more on how this shapes what you see when you open a document, see [Understanding confidence scores](/reviewing-data/confidence-scores).
+
+## How third-party model providers fit in
+
+Some of the agent's work runs on Byron's own infrastructure, and some uses model APIs from third-party providers. Where third-party providers are used, we work with them under agreements that prohibit them from using submitted data to train their own models, and the same data classification and access rules apply.
+
+## Want more detail?
+
+If your firm has specific questions about how AI processes your data — for vendor onboarding, a security questionnaire, or your own due diligence — email [support@usebyron.com](mailto:support@usebyron.com) and we'll work with you under NDA.
+
+<CardGroup cols={2}>
+  <Card title="How we protect client data" icon="shield-check" href="/security/data-protection">
+    The controls behind every part of Byron, including the agent's processing.
+  </Card>
+
+  <Card title="Compliance certifications" icon="clipboard-list-check" href="/security/compliance">
+    SOC 2 Type 1, the Type 2 in progress, and the ongoing audit program.
+  </Card>
+</CardGroup>
