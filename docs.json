@@ -83,7 +83,6 @@
             "pages": [
               "security/data-protection",
               "security/compliance",
-              "security/retention-deletion",
               "security/ai-and-data"
             ]
           }
