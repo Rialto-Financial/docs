@@ -1,12 +1,84 @@
 ---
 title: "How we protect client data"
-description: "Encryption, access controls, and the security practices behind Byron."
+description: "An overview of the technical, operational, and personnel controls Byron uses to keep your firm's and your clients' data safe."
 ---
 
-# How we protect client data
+Tax data is some of the most sensitive information your firm handles — Social Security numbers, income figures, account numbers, and a near-complete picture of each client's financial life. Byron treats it that way. Customer data is classified at the highest internal tier ("Confidential") and is protected by the same controls regardless of whether it's in a draft filing, a downloaded export, or a backup.
 
-Encryption, access controls, and the security practices behind Byron.
+This page summarizes the technical, operational, and personnel controls behind that protection. For deeper detail on any area, see the linked pages.
 
 <Note>
-This page is still in progress. Check back soon, or [contact support](/help/contact-support) if you have questions.
+  Byron is operated by Rialto Finance, Inc. References to "Rialto" in our security documentation refer to the same company.
 </Note>
+
+## Independent attestations
+
+**SOC 2 Type 1.** Byron completed an independent SOC 2 Type 1 examination as of September 25, 2025. The audit, conducted by Insight Assurance, evaluated the design of our controls against the AICPA Trust Services Criteria for the Security category. The full report is available to customers and prospects under NDA.
+
+**SOC 2 Type 2 in progress.** We are currently in the observation period for our SOC 2 Type 2 examination, which evaluates the *operating effectiveness* of those same controls over a sustained period. We will share the report once the audit completes.
+
+For more on our compliance program, see [Compliance](/security/compliance).
+
+## Where your data lives
+
+Byron is a cloud-based platform hosted entirely on Amazon Web Services. We do not run our own data centers. Customer data is stored and processed inside our AWS environment, behind a Virtual Private Cloud, with the network perimeter restricted to HTTPS-only frontend endpoints. The network is segmented to prevent unauthorized access between customer environments, and all administrative access to production infrastructure goes through encrypted connections with multi-factor authentication.
+
+Physical and environmental security at the underlying data centers is AWS's responsibility. AWS holds its own SOC 2 attestations, which we review at least annually as part of our vendor management program.
+
+## Encryption
+
+All confidential data is encrypted both in transit and at rest, in line with NIST SP 800-57.
+
+- **In transit.** All traffic between your browser, our APIs, and our integrations uses TLS with strong cipher suites and current industry-standard protocols.
+- **At rest.** The datastores housing customer data use AES-256 encryption. Backups are encrypted using the same standard.
+- **Passwords.** User passwords are never stored in cleartext. We use one-way hashing (Bcrypt, PBKDF2, scrypt, or Argon2) with unique cryptographic salt and pepper.
+- **Endpoint devices.** Company laptops are protected with full-disk encryption.
+
+## Access controls
+
+We follow the principle of least privilege: every employee, contractor, and system has only the access strictly required to do its job. Permissions that aren't expressly granted are prohibited by default.
+
+- **Role-based access control.** Permissions are assigned to roles rather than individuals. Individual exceptions require approval from the system or data owner.
+- **Multi-factor authentication.** All privileged access to production infrastructure requires MFA. Generic admin accounts are not used for routine operations.
+- **Annual access reviews.** Every user, administrator, and service account is reviewed at least annually to confirm that access is still appropriate. Required changes are tracked to completion.
+- **Prompt offboarding.** When someone leaves Byron, their access to all in-scope systems is removed within 24 business hours.
+- **Unique identifiers.** Every person has a unique user ID. Credentials are not shared between team members.
+
+## Monitoring, detection, and incident response
+
+We continuously monitor our environment for anomalies and act on what we find.
+
+**Continuous monitoring.** AWS GuardDuty provides continuous threat and intrusion detection across our network. CloudWatch and Datadog handle system logging, alerting, and capacity monitoring. Logs include source and destination IP, port, protocol, and timestamp, and are retained for at least one year.
+
+**Vulnerability management.** Vulnerability scans run continuously against external-facing systems. AWS Inspector and GitHub Dependabot identify newly emerging vulnerabilities in our code and dependencies. Independent penetration testing is conducted at least annually, and findings are tracked to remediation. Critical security patches are applied within 30 days of identification, and non-critical patches within 60 days.
+
+**Anti-malware.** Anti-malware is deployed across systems susceptible to malicious attacks, configured to update daily, and cannot be disabled or altered by end users.
+
+**Incident response.** We maintain a documented incident response plan that defines severity levels, escalation paths, response procedures, and post-incident review. The plan is tested at least annually. In the event of an incident affecting customer data, we will notify affected customers without unreasonable delay, in accordance with our contractual commitments and applicable law.
+
+## Backups, retention, and deletion
+
+Customer data is backed up to encrypted storage in AWS and monitored for completion by our CTO. Backup restoration is tested at least annually as part of our business continuity and disaster recovery exercises.
+
+Customer data and accounts are deleted within 60 days of contract termination. Personally identifiable information is deleted or de-identified once it no longer has a legitimate business purpose.
+
+For more detail on retention windows and our deletion process, see [Data retention and deletion](/security/retention-deletion).
+
+## Our team and our vendors
+
+Security depends on people as much as on systems. Every Byron employee and contractor goes through a background check before their start date, signs a confidentiality agreement, acknowledges our Code of Conduct, and completes security awareness training within thirty days of joining. Active employees complete refresher training at least annually, and managers conduct formal performance reviews each year.
+
+Critical third-party vendors are inventoried, contractually bound to security and privacy requirements, and reviewed at least annually. We execute non-disclosure agreements with vendors before sharing any confidential information.
+
+## Want more detail?
+
+If your firm requires our SOC 2 Type 1 report or you have a security questionnaire as part of vendor onboarding, contact [support@usebyron.com](mailto:support@usebyron.com) and we'll work with you under NDA.
+
+<CardGroup cols={2}>
+  <Card title="Compliance" icon="shield-check" href="/security/compliance">
+    More on SOC 2 Type 1, the upcoming Type 2, and our compliance program.
+  </Card>
+  <Card title="AI and your data" icon="brain" href="/security/ai-and-data">
+    How Byron's agent uses — and doesn't use — your data.
+  </Card>
+</CardGroup>
