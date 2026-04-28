@@ -1,0 +1,65 @@
+---
+title: "From upload to ready for review"
+description: "What Byron does behind the scenes between when you upload a document and when it's ready for you to review."
+---
+
+When you drag a document into a filing, the status changes to **Processing** and Byron agent starts to work on your file:
+
+- Identifying the form type and the tax year it applies to.
+- Matching the document to the correct recipient (important for joint filings where each spouse has their own W-2s or 1099s).
+- Reading every field — including handwritten corrections and annotations — and assigning a confidence score to each one.
+- Flagging anything that looks off, so it's surfaced at the top of the review queue.
+
+A few seconds to a few minutes later, the document moves to **Ready for Review** with extracted fields, anchors back to the source PDF, and any flags that need your attention. 
+
+## The crucial steps Byron goes through are:
+
+<Steps>
+  <Step title="Pre-processing" titleSize="h3">
+    Before any extraction starts, Byron prepares each file. That means running OCR on scanned PDFs and image-based pages, confirming the file type is supported, and doing a few sanity checks to make sure the document has readable content.
+
+    See [Supported file formats](/uploading-documents/supported-formats) for what Byron accepts.
+  </Step>
+  <Step title="Splitting" titleSize="h3">
+    If a single file contains multiple forms — a common pattern in client packages and brokerage statements — Byron separates it into individual documents. Each split document is processed independently from this point forward, so you'll see one entry per form in the filing rather than one entry for the original PDF.
+  </Step>
+  <Step title="Classification" titleSize="h3">
+    Byron identifies what each document is. That means figuring out the form type (W-2, 1099-INT, 1099-DIV, K-1, brokerage statement, and so on), the tax year it applies to, and which recipient on the filing it belongs to. Recipient matching matters most for joint filings, where each spouse may have their own W-2s and 1099s.
+
+    See [Supported tax forms](/uploading-documents/supported-tax-forms) for what Byron can recognize.
+  </Step>
+  <Step title="Extraction" titleSize="h3">
+    Byron doesn't run a single extraction pass. For each document, multiple models read the same source and return their own version of every field — including handwritten corrections and annotations. Each extracted field is also tied back to its location in the source PDF, so a reviewer can click any value and jump to where it came from.
+  </Step>
+  <Step title="Confidence scoring" titleSize="h3">
+    Once the models have finished, Byron compares their answers field by field. Where the models agree, confidence is high and the field is marked ready. Where they disagree, confidence is lower and the field is surfaced for your review. The score reflects how strongly the models agreed on the value — not a guess at whether the value is correct.
+
+    See [Understanding confidence scores](/reviewing-data/confidence-scores) for what each confidence level means in practice and how it shapes the review screen.
+  </Step>
+  <Step title="Flagging" titleSize="h3">
+    Finally, Byron surfaces anything that doesn't look right at the document level. Common flags include:
+
+    - **No reportable amounts** — the form is recognized but every meaningful field is zero or blank.
+    - **Wrong tax year** — a prior-year document was mixed in with the current year's package.
+    - **Wrong recipient** — the name on the form doesn't match the client (or either spouse on a joint return).
+    - **Possible duplicate** — two uploads look like the same document.
+
+    Flagged documents still land in the filing — they're just surfaced for your attention so nothing silently drops.
+  </Step>
+</Steps>
+
+## When the agent is done
+
+Once the pipeline finishes, the document's status changes from **Processing** to **Ready for Review** and you can open it from the filing. Simpler forms like W-2s and 1099s usually take under a minute. Denser forms like K-1s can take several minutes. In a batch upload, simpler forms will finish first and appear as **Ready for Review** while longer forms are still being extracted.
+
+## What's next
+
+<CardGroup cols={2}>
+  <Card title="Uploading documents" icon="upload" href="/uploading-documents/uploading-docs">
+    Add documents to a filing one at a time or as a full client package.
+  </Card>
+
+  <Card title="The review screen" icon="magnifying-glass" href="/reviewing-data/review-screen">
+    See how the extracted data is laid out for you to verify.
+  </Card>
+</CardGroup>

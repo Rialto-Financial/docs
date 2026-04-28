@@ -47,8 +47,9 @@
           {
             "group": "Uploading documents",
             "pages": [
-              "uploading-documents/supported-formats",
               "uploading-documents/uploading-docs",
+              "uploading-documents/from-upload-to-ready-for-review",
+              "uploading-documents/supported-formats",
               "uploading-documents/supported-tax-forms"
             ]
           },
