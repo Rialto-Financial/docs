@@ -1,53 +1,104 @@
 ---
-title: "Importing prior year data"
-description: "Bring last year's return context into Byron so clients roll forward cleanly — set up once, reuse every season."
+title: "Setting up your client base"
+description: "How a one-time import from your tax software becomes the foundation for every filing your firm will ever process in Byron."
 ---
 
-Byron works best when it knows what your firm already had in Lacerte or CCH Axcess before this tax year began. Prior year data — basis balances, naming conventions, election carryovers, rolled-forward client records — is what lets Byron match new documents to existing clients and keep your return in sync with your tax software.
+This is one of the most important steps in getting Byron set up for your firm — and it does much more than the word "import" suggests. When you connect Byron to your existing tax software, you're building the foundation that every future filing, every uploaded document, and every export will reference.
 
-You bring in prior year data once, at setup, and Byron reuses it every season after that. How you do it depends on which tax software your firm uses.
+This page walks through what gets set up, why it matters for every client interaction afterwards, and how to do it for each tax software.
 
 <Note>
-  Before you begin, confirm that your organization administrator had set up relevant integrations to your tax preparation software. See [Setting up your organization page](/getting-started/org-setup) for further information
+  Before you begin, confirm your organization administrator has set up the relevant integrations. See [Setting up your firm on Byron](/getting-started/setting-up-your-firm) for more.
 </Note>
 
-**CCH Axcess firms** do a one-time bulk export of every pro forma return for the current tax year, packaged as a `.dat` file. Byron ingests it, populates all your rolled-forward clients into the client list with a **Rolled Forward** status, and keeps the CCH client IDs attached so exports land on the right returns.
+## What this one step actually sets up
 
-**Lacerte firms** use a file called iData, delivered per filing. There's no bulk import step — each filing you start brings its own iData at export time, which is what gives Byron the basis tracking and naming continuity for that client.
+When Byron consumes data from your tax software, several things happen at once.
 
-## CCH Axcess: one-time bulk import
+<CardGroup cols={2}>
+  <Card title="Your full client roster lands in Byron at once" icon="users">
+    Every rolled-forward client from your tax software is created as a client record in Byron in a single pass — hundreds or thousands of clients in one go, not one-at-a-time entry.
+  </Card>
 
-### Export from CCH
+  <Card title="Each client gets a complete file structure" icon="folder-tree">
+    Byron sets up the file structure for every imported client automatically. No manual folder creation, no naming conventions to enforce, no per-client setup — it's all derived from what you already have in your tax software.
+  </Card>
 
-1. Open **Return Manager** and filter to this tax year's pro forma returns.
-2. Select the returns you want to send to Byron. The checkbox at the top of the list selects the full page; check the count at the bottom before continuing.
-3. Go to **Utilities → Tax Data → Export**.
-4. Choose **Return selected**.
-5. Check the **Include input data** box at the top. Leave the rest of the options unchecked — the required-field indicator on one of them only applies if you click it.
-6. Click **Export**.
-7. From the CCH Dashboard, open **Application Links → Batch Manager** (second option under Tax).
-8. Refresh the job until the status reads **Ready for download**, then download the file. The filename is blank on download — give it a name your firm will recognize (client name, date, or "Byron import" work fine).
+  <Card title="Prior-year context comes with each client" icon="layer-group">
+    Basis tracking, prior-year balances, election carryovers, naming conventions, and the original client IDs from your tax software are all preserved. That context follows the client through every filing in Byron.
+  </Card>
 
-### Send the file to Byron
+  <Card title="The base is reused for every future upload" icon="link">
+    This client base is the foundation Byron uses to route every new document you upload going forward. When a W-2 or K-1 lands in Byron, it's matched to the right existing client and the right tax year automatically — without you having to sort or assign anything.
+  </Card>
+</CardGroup>
+
+**What it means for you.** Set this up once and your firm doesn't have to think about it again. New filings start with the right client already in place. New documents flow to the right return without manual sorting. The client IDs your tax software needs at export time are already attached. Without this base, every upload would be a manual matching exercise.
+
+## How to set it up
+
+How you bring your client base into Byron depends on your tax software.
+
+### CCH Axcess — one-time bulk import
+
+CCH Axcess firms do a one-time bulk export of every pro forma return for the current tax year, packaged as a `.dat` file. Byron ingests it, populates every rolled-forward client into your client list with a **Rolled Forward** status, and keeps the original CCH client IDs attached so exports land on the right returns.
+
+#### Export from CCH
+
+<Steps>
+  <Step title="Open Return Manager and filter to pro forma returns">
+    In CCH Axcess Return Manager, filter to this tax year's pro forma returns.
+  </Step>
+  <Step title="Select the returns to send">
+    The checkbox at the top of the list selects the full page — check the count at the bottom before continuing.
+  </Step>
+  <Step title="Open the export utility">
+    Go to **Utilities → Tax Data → Export**, then choose **Return selected**.
+  </Step>
+  <Step title="Configure the export">
+    Check the **Include input data** box at the top. Leave the rest of the options unchecked — the required-field indicator on one of them only applies if you click it. Click **Export**.
+  </Step>
+  <Step title="Download the file from Batch Manager">
+    From the CCH Dashboard, open **Application Links → Batch Manager** (second option under Tax). Refresh the job until the status reads **Ready for download**, then download the file. The filename is blank on download — rename it to something your firm will recognize (client batch name, date, or "Byron import" works).
+  </Step>
+</Steps>
+
+#### Send the file to Byron
 
 Hand the downloaded `.dat` to Byron. During onboarding, your CSM receives it directly. Once the self-serve direct integration is live in your account, you'll upload it from the dashboard instead.
 
 Once Byron processes the file, the clients show up in your client list with a **Rolled Forward** status. That's the signal that Byron has last year's context for them.
 
-## Roll forward and the Rolled Forward status
+### Lacerte — per-filing iData
 
-"Roll forward" is the step in your tax software where last year's finalized return becomes this year's starting point — client records, balances, elections, and naming conventions carried into the new tax year as a pro forma return. Byron doesn't do the roll forward itself; that happens upstream in CCH or Lacerte. What Byron does is consume the rolled-forward data and keep its client records aligned with it.
+Lacerte firms don't do a single bulk import. Instead, the prior-year context comes through a file called iData, delivered per filing. Each filing you start brings its own iData at export time, which is what gives Byron the basis tracking and naming continuity for that client.
 
-After a CCH bulk import, every populated client shows a **Rolled Forward** status in the Byron client list. That status means Byron has last year's return context for the client and will:
+The trade-off: Lacerte firms get per-client context exactly when they need it (at export), but they don't have the full firm-wide client list pre-populated in Byron the way CCH firms do.
+
+## What the Rolled Forward status means
+
+After a CCH bulk import, every populated client shows a **Rolled Forward** status in your client list. That status means Byron has last year's return context for the client and will:
 
 - Route new documents to the right existing record instead of creating a duplicate.
 - Carry the CCH client ID through every filing and export, so data lands on the correct return.
 - Preserve basis tracking and naming conventions on subsequent filings.
 
-## Incremental imports for CCH
+## When more documents arrive later
 
 If source documents for a client arrive after you've already started their filing — a late K-1, a corrected 1099, documents for a second submission — you don't need to start over. CCH Axcess firms can send additional documents into an existing filing at any point, and Byron folds them into the workpaper without overwriting what's already there. This matters most during extension season, when K-1s often arrive months after the first set of source documents.
 
 <Note>
   Incremental imports are a CCH Axcess capability. Lacerte firms handle late documents through a fresh iData at export time for the updated filing.
 </Note>
+
+## What's next
+
+<CardGroup cols={2}>
+  <Card title="Creating clients" icon="user-plus" href="/managing-clients/creating-clients">
+    For one-off clients that aren't part of your tax software import.
+  </Card>
+
+  <Card title="Uploading documents" icon="upload" href="/uploading-documents/uploading-docs">
+    Add tax documents to a filing one at a time or as a full client package.
+  </Card>
+</CardGroup>
