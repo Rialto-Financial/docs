@@ -101,6 +101,13 @@
           "changelog/release-notes",
           "changelog/upcoming-features"
         ]
+      },
+      {
+        "tab": "Pages for future deployment / alternative versions",
+        "hidden": true,
+        "pages": [
+          "untitled-page"
+        ]
       }
     ]
   },

@@ -1,24 +1,110 @@
 ---
-title: "Uploading documents"
-description: "Add tax documents to a filing one at a time or as a full client package."
+title: "Uploading documents version 2"
+description: "This version of the page contains information on the planned deployments of automatic uploads using DROPBOX, TRUSS, KARBON integrations
+
+Add tax documents to a filing one at a time or as a full client package."
 ---
 
 Once you've created a filing, the next step is getting documents into it. Byron handles both one-off uploads and full client packages — you don't need to sort or label anything first. The agent reads each document, figures out what it is, and routes it to the right place in the filing.
 
+## Automatic and manual uploads
+
+Byron provides multiple methods for uploading client data and tax documents. Whether you prefer manual control, automated syncing, or a hybrid approach, you can choose the upload method that best fits your workflow.
+
 Byron accepts PDFs and Excel files (.xlsx). For the full list, see [Supported formats](https://byron-bb7c63f4.mintlify.app/uploading-documents/supported-formats).
 
-## Ingestion options
+<Tip>
+  You don't need to split a client package into separate files before uploading. Byron will identify and separate each document inside a multi-form PDF on its own.
+</Tip>
 
-Byron currently allows for two manual upload options.
+## Automatic upload options
+
+Byron supports multiple types of integration for automatic syncing of files.
+
+<Tabs>
+  <Tab title="Dropbox Integration">
+    Automate document upload by syncing Byron with your existing document management and client portal systems.
+
+    **Dropbox Sync**
+
+    Dropbox integration enables automatic document ingestion from specified folders.
+
+    #### **Setup Dropbox Sync**
+
+    1. Complete the Dropbox integration setup (see [Setting up your organization](/getting-started/org-setup))
+    2. Create a folder structure in Dropbox:
+       ```text
+       /Acacia Tax Documents/
+         /2024/
+           /Client Name 1/
+           /Client Name 2/
+       ```
+    3. In Byron, navigate to Settings \> Integrations \> Dropbox
+    4. Click "Configure Sync Folders"
+    5. Map Dropbox folders to Byron projects
+    6. Set sync frequency (real-time, hourly, or daily)
+
+    <Tip>
+      **Best Practice:** Use a consistent folder structure where each client has their own subfolder. This enables automatic project matching.
+    </Tip>
+
+    #### **How Dropbox Sync Works**
+
+    Once configured, Byron monitors your Dropbox folders:
+
+    1. When a new file is added to a synced folder, Byron detects it within minutes
+    2. The file is automatically downloaded and associated with the matching project
+    3. Document processing begins immediately
+    4. You receive a notification when processing is complete
+
+    <Note>
+      **Important:** Documents are not deleted from Dropbox after sync. They remain in Dropbox and are also stored in Byron.
+    </Note>
+  </Tab>
+  <Tab title="Truss Integration">
+    Truss integration automatically imports documents uploaded by clients through their portal.
+
+    #### **Setup Truss Sync**
+
+    1. Complete the Truss integration setup (see Onboarding guide)
+    2. In Truss, create a project for the client
+    3. In Byron, link the Truss project to an Acacia project:
+       - Navigate to the project in Byron
+       - Click "Link External Project"
+       - Select the corresponding Truss project
+    4. Configure which document types should auto-sync
+
+    #### **Client Upload Process via Truss**
+
+    1. Client logs into their Truss portal
+    2. Client uploads documents in response to document requests
+    3. Documents automatically sync to Byron when marked "Approved" in Truss
+    4. Processing begins immediately in Byron
+    5. Preparer receives notification of new documents
+
+    <Tip>
+      \*\*Best Practice: \*\*Use Truss document requests to guide clients to upload specific forms. This reduces processing errors and ensures you receive all necessary documents.
+    </Tip>
+  </Tab>
+  <Tab title="Karbon Integration">
+    Karbon integration syncs work items and client records, enabling automated project creation.
+
+    #### Connect Karbon to sync client records, work items, and task status.
+
+    1. Navigate to Settings → Integrations → Karbon
+    2. Click "Connect Karbon"
+    3. Enter your Karbon organization URL
+    4. Authorize the connection with your Karbon credentials
+    5. Select which workflows should sync to Byron
+  </Tab>
+</Tabs>
+
+## Manual upload options
 
 From inside a filing, you can add documents in either of two ways:
 
 - **Drag and drop** one or more files directly onto the filing workspace.
 - **Click Upload** and choose files from your computer.
-
-<Tip>
-  You don't need to split a client package into separate files before uploading. Byron will identify and separate each document inside a multi-form PDF on its own.
-</Tip>
 
 <Tabs>
   <Tab title="Upload a single document">
@@ -72,8 +158,6 @@ From inside a filing, you can add documents in either of two ways:
 <Info>
   If you have questions or need assistance, please contact our support team at [support@usebyron.com](mailto:support@usebyron.com).
 </Info>
-
-The option to perform automatic uploads via Dropbox and more is underway.
 
 ## What's next
 
