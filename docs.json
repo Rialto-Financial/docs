@@ -40,8 +40,8 @@
           {
             "group": "Managing clients",
             "pages": [
-              "managing-clients/creating-clients",
-              "managing-clients/client-base"
+              "managing-clients/client-base",
+              "managing-clients/creating-clients"
             ]
           },
           {
