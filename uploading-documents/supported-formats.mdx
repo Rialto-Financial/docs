@@ -5,13 +5,17 @@ description: "What Byron accepts — and how to handle files that aren't directl
 
 Byron is built to take source documents exactly as they arrive from clients and brokerages. In most cases you can drag a package straight into a filing without sorting, renaming, or converting anything. This page covers which file formats Byron accepts and what to do when a file doesn't fit the supported list.
 
-## Supported formats
+<Note>
+  While Byron currently supports PDF and Excel files only, we’re actively working on adding support for image files, Word documents, and ZIP archives
+</Note>
 
 Byron accepts two file types today.
 
 <AccordionGroup>
   <Accordion title="PDF">
-    **PDF (**`.pdf`**)** is the primary format. Every tax document Byron processes — W-2s, 1099s, K-1s, K-3s, brokerage statements, Schedule C profit-and-loss statements, and the rest — is accepted as a PDF. Both digital PDFs and scanned PDFs work.
+    **PDF (**`.pdf`**)** is the primary format. Every tax document Byron processes — W-2s, 1099s, K-1s, K-3s, brokerage statements, Schedule C profit-and-loss statements, and the rest — is accepted as a PDF. 
+
+    Byron handles real-world PDF quality, not just clean exports, which means both digital PDFs and scanned PDFs work. A scanned PDF from a client's paper stack, or a page with coffee stains or highlighter marks, will still be processed. Byron uses AI models for extraction rather than traditional OCR, which means it's tolerant of imperfect scans, skewed pages, and low-resolution captures.
   </Accordion>
 
   <Accordion title="Excel">
@@ -21,20 +25,15 @@ Byron accepts two file types today.
 
 Upload is drag-and-drop from anywhere on the filing workspace, or by clicking **Upload** and selecting files from your computer.
 
-## PDF quality
+## What's not yet supported
 
-Byron handles real-world PDF quality, not just clean exports. A scanned PDF from a client's paper stack, or a page with coffee stains or highlighter marks, will still be processed. Byron uses AI models for extraction rather than traditional OCR, which means it's tolerant of imperfect scans, skewed pages, and low-resolution captures.
+These formats are on the roadmap but need to be converted before upload today:
 
-That said, digital PDFs still perform best. If you have the choice between a clean digital PDF from a broker or employer and a phone photo of the same form, take the clean one. Byron will process both; the clean one is faster and surfaces fewer review flags.
+- **Image files** (`.jpg`, `.jpeg`, `.png`, `.heic`) — _Coming soon._ For now, save to PDF first. On iPhone, the Files app can convert an image to PDF via the share sheet; on desktop, most operating systems can "Print to PDF" from an image preview.
+- **Word documents** (`.doc`, `.docx`) — _Coming soon._ For now, print to PDF before uploading.
+- **Zip archives** (`.zip`) — _Coming soon._ For now, extract the archive and upload the individual files inside.
 
-## What's not supported
-
-A few formats need to be converted before upload:
-
-- **Image files** (`.jpg`, `.jpeg`, `.png`, `.heic`) — save to PDF first. On iPhone, the Files app can convert an image to PDF via the share sheet; on desktop, most operating systems can "Print to PDF" from an image preview.
-- **Word documents** (`.doc`, `.docx`) — print to PDF before uploading.
-- **Zip archives** (`.zip`) — extract the archive and upload the individual files inside. Byron does not unpack archives automatically.
-- **Folders** — upload the individual files. Byron's uploader doesn't accept a folder as a single drag target.
+Byron's uploader doesn't accept a folder as a single drag target — upload the individual files inside the folder.
 
 If you're not sure whether a specific file will work, upload it. If Byron can't process it, the rejection reason appears on the file tile in the filing workspace so you can fix and re-upload.
 
