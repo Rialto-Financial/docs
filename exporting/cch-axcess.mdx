@@ -1,13 +1,27 @@
 ---
 title: "CCH Axcess"
-description: "Export Byron's extracted data into CCH Axcess Return Manager using a .DAT file."
+description: "Export Byron's extracted data into CCH Axcess via direct API integration or `.dat` file import."
 ---
 
-Byron exports to CCH Axcess as a `.dat` file. You download the file from Byron, then import it through CCH Axcess Return Manager — no profile setup required.
+Byron exports to CCH Axcess as a `.dat` file. There are two ways to get that file into CCH Axcess: through Byron's direct API integration with CCH (no manual file handling required), or by downloading the `.dat` file from Byron and importing it manually through Return Manager. Both methods use the same underlying file — your firm picks whichever fits your setup.
 
 <Note>
   If you run into problems during the export or import, reach out to [support@usebyron.com](mailto:support@usebyron.com).
 </Note>
+
+## Two export methods
+
+<CardGroup cols={2}>
+  <Card title="API integration" icon="bolt">
+    Byron pushes the export directly to CCH Axcess through the API. There's no file to download and no manual import — once you initiate the export from Byron, the data lands in CCH Axcess on its own.
+  </Card>
+
+  <Card title="Manual file import" icon="file-arrow-down">
+    Byron generates a `.dat` file that you download and import through CCH Axcess Return Manager yourself. Useful for firms that aren't on the API integration, or as a fallback if the API isn't available.
+  </Card>
+</CardGroup>
+
+The rest of this page walks through both flows. The setup in Byron (Part A) is the same regardless of which method you use — the difference is what happens after you click **Initiate Export**.
 
 ## Before you start
 
@@ -15,9 +29,9 @@ Every document you want to export must be in **Approved** status. If anything in
 
 ## Exporting a filing into CCH Axcess
 
-Each export is two parts: download a `.dat` file from Byron, then import that file into CCH Axcess Return Manager.
+### Part A — configure and initiate the export from Byron
 
-### Part A — download the .DAT file from Byron
+This part is the same for both export methods.
 
 <Steps>
   <Step title="Open the filing and create an export">
@@ -34,7 +48,17 @@ Each export is two parts: download a `.dat` file from Byron, then import that fi
   <Step title="Initiate the export">
     Click **Initiate Export** at the top or bottom of the dialog to start generating the `.dat` file.
   </Step>
-  <Step title="Download the file">
+</Steps>
+
+What happens next depends on your firm's setup:
+
+- **If your firm is on the API integration**, Byron pushes the export directly into CCH Axcess. You don't need to download anything or open Return Manager — the data arrives on its own. You can skip the rest of this page.
+- **If your firm is on manual file import**, the `.dat` file is available to download from Byron. Continue with Part B below.
+
+### Part B — manual file import (skip if you're on the API integration)
+
+<Steps>
+  <Step title="Download the file from Byron">
     The file usually takes 30 to 90 seconds to generate. When it's ready, click the **CCH Tax File (.dat)** link to download.
   </Step>
   <Step title="Save the file">
@@ -45,8 +69,6 @@ Each export is two parts: download a `.dat` file from Byron, then import that fi
 <Warning>
   Before you start the import, make sure the return is **not currently open** in CCH Axcess. The import will fail if Return Manager has the return loaded.
 </Warning>
-
-### Part B — import the .DAT file into CCH Axcess
 
 <Steps>
   <Step title="Open Import in Return Manager">
