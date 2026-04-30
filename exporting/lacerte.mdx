@@ -145,8 +145,25 @@ Once the initial setup is complete, each export is two parts: download the CSV f
 </Steps>
 
 <Warning>
-  The import only loads the data into Data Conductor's staging area. You have to click **Transfer** to move it into the Lacerte return — without that step, nothing reaches the actual filing.
+  Two things to remember about Data Conductor:
+
+  - **Click Transfer.** The import only loads data into Data Conductor's staging area. Without clicking **Transfer**, nothing reaches the actual Lacerte return.
+  - **Don't delete the staging area data after Transfer.** The imported data must remain in Data Conductor's staging area even after a successful Transfer. Deleting it can result in the loss of imported data inside the Lacerte return.
 </Warning>
+
+## <Icon icon="bookmark" /> Best practice: make corrections in Byron, not Lacerte
+
+Lacerte preserves any manually entered field values across imports. If you correct a value directly in Lacerte and then re-import the same field from Byron later, both values are kept — and Lacerte will show them as two sub-entries that sum to the wrong total.
+
+For example: if you manually enter an estimated K-1 distribution of \$50 in Lacerte while waiting for the actual K-1, and then later import the actual K-1 from Byron with the value of \$50,000 the field in Lacerte will end up showing \$50,050 with manual entry and the \$50,000 import stacked on top of each other as two sub-entries.
+
+To avoid this:
+
+- Make all corrections inside Byron, where the audit trail and confidence scoring stay intact.
+- Treat Lacerte imports as one-time events for each filing where possible.
+- If a value needs to change after you've already imported into Lacerte, update it in Byron and re-export — but be aware that any manual edits you've made directly in Lacerte for that field will still be present and may stack with the new import.
+
+The reviewed, approved data in Byron is what should reach Lacerte — not a mix of manual entries and imports.
 
 ## What's next
 
