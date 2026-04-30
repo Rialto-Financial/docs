@@ -33,7 +33,17 @@ When Byron consumes data from your tax software, several things happen at once.
   </Card>
 </CardGroup>
 
-**What it means for you.** Set this up once and your firm doesn't have to think about it again. New filings start with the right client already in place. New documents flow to the right return without manual sorting. The client IDs your tax software needs at export time are already attached. Without this base, every upload would be a manual matching exercise.
+## What this means for you 
+
+The payoff from this one-time setup compounds across the season.
+
+**Faster processing on every upload.** When clients and IDs are pre-populated, every new document — a client's W-2 in February, a corrected 1099 in March, a late K-1 in August — flows to the right place without anyone manually matching it. Across a season, that's thousands of documents your team doesn't have to sort.
+
+**Consistent organization across your team.** Every client uses the same structure, derived from your tax software rather than from whoever set them up in Byron. Anyone on your team can pick up any client filing and navigate it without needing a custom briefing.
+
+**Cleaner exports back to your tax software.** Because the original tax-software client IDs travel with every export, returns land on the right record in CCH or Lacerte without manual mapping. That cuts out a whole class of "wrong client" errors at export time.
+
+**A foundation that scales with your firm.** As preparers come and go, as you onboard seasonal staff for tax season, as your client list grows year over year, the foundation persists. Each new filing season inherits the structure instead of starting fresh, and new team members work in the same shape of filings as everyone else.
 
 ## How to set it up
 
@@ -82,6 +92,14 @@ After a CCH bulk import, every populated client shows a **Rolled Forward** statu
 - Route new documents to the right existing record instead of creating a duplicate.
 - Carry the CCH client ID through every filing and export, so data lands on the correct return.
 - Preserve basis tracking and naming conventions on subsequent filings.
+
+## Known limitations
+
+<Warning>
+  **CCH bulk exports can occasionally omit data.** Sometimes a single export may not capture everything in one pass, thus we recommend performing multiple bulk exports to ensure 100% coverage. The bulk export from CCH Axcess sometimes misses a subset of clients or fields without raising an error on the CCH side. This is a CCH-side behavior, not specific to Byron.
+
+  After the initial import, compare your populated Byron client list against your CCH roster and run one or more follow-up exports for anything missing. Your CSM can walk you through this during onboarding.
+</Warning>
 
 ## What's next
 
