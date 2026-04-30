@@ -32,7 +32,6 @@
             "pages": [
               "getting-started/welcome-page",
               "getting-started/how-byron-works-page",
-              "getting-started/org-setup",
               "getting-started/invited-users",
               "getting-started/first-document"
             ]
@@ -103,8 +102,9 @@
         "tab": "Pages for future deployment / alternative versions",
         "hidden": true,
         "pages": [
+          "uploading-documents/from-upload-to-ready-for-review",
           "untitled-page",
-          "uploading-documents/from-upload-to-ready-for-review"
+          "getting-started/org-setup"
         ]
       }
     ]
