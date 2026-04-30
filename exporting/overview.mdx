@@ -3,54 +3,52 @@ title: "Export overview"
 description: "Hand a reviewed filing back to your tax software, or download it as an Excel workbook or PDF — the mechanics that apply to every export."
 ---
 
-Exporting is the last step in a Byron filing. After you've reviewed and approved the extracted data, Byron packages it in the format your tax software expects and hands it back — either directly into Lacerte, CCH Axcess, or GoSystem, or as an Excel workbook or collated PDF you can use however you want. The data that leaves Byron is the reviewed, approved version — corrections applied, audit trail preserved, relationships between forms intact — so the return arrives coherent on the other side.
+Exporting is the last step in a Byron filing. After you've reviewed and approved the extracted data, Byron packages it in the format you need — a direct import for Lacerte or CCH Axcess, an Excel-based file structured for GoSystem, or a standalone Excel workbook or collated PDF you can use however you want. The data that leaves Byron is the reviewed, approved version — corrections applied, audit trail preserved, relationships between forms intact — so the return arrives coherent on the other side.
 
 This page covers the mechanics common to every export: when a document is eligible to be included, how single and batch exports work, and the three-step dialog you'll see every time you click **Create an Export**. For the specifics of each destination, see the per-destination pages linked at the end.
 
 ## What Byron exports to
 
-The destination picker shows seven options, grouped into two categories.
-
-**Direct imports into tax software.** Lacerte, CCH Axcess, and GoSystem each accept Byron's export as a direct import into the tax software — the file arrives in a format the software knows how to ingest, with client IDs preserved so the data lands on the right return. UltraTax CS and Drake show a **Coming soon** tag in the destination picker; they aren't available yet but will join the list as those integrations go live.
+Byron allows you to pick the destination of your export and format.
 
 <AccordionGroup>
-  <Accordion title="Direct imports into tax software. ">
-    Lacerte, CCH Axcess, and GoSystem each accept Byron's export as a direct import into the tax software — the file arrives in a format the software knows how to ingest, with client IDs preserved so the data lands on the right return. 
-
-    UltraTax CS and Drake formats - **Coming soon**. These aren't available yet but will join the list as those integrations go live.
+  <Accordion title="Tax software exports">
+    - **Lacerte** — Byron generates a CSV file that imports directly into Lacerte through Data Conductor. Client IDs are preserved so the data lands on the right return.
+    - **CCH Axcess** — Byron generates a `.dat` file that CCH Axcess imports through Batch Manager. CCH supports two routes for getting that file in: a direct API integration that pushes the import without any manual file handling, or a manual file download you import yourself. Both routes use the same underlying file — your firm picks whichever fits its setup.
+    - **GoSystem** — Byron generates an Excel-based file structured for use within GoSystem workflows. Unlike Lacerte and CCH Axcess, this is not a direct tax-software import — it's a deliverable you work with inside GoSystem yourself.
   </Accordion>
 
-  <Accordion title="File downloads.">
-    - Excel produces a workbook you can open, review, or hand off to another tool. 
-    - PDF produces a collated PDF of the batch — every source document combined into a single download. 
+  <Accordion title="General file downloads">
+    - **Excel** — a standalone workbook you can open, review, or hand off to another tool.
+    - **PDF** — a collated PDF of the batch, with every source document combined into a single download.
 
-    Use these when you want the data outside a tax-software import — for a workpaper, a partner review, or a client handoff.
+    Use these when you want the data outside any tax-software import — for a workpaper, a partner review, or a client handoff.
   </Accordion>
 </AccordionGroup>
 
 ## Documents have to be Approved
 
-Make sure that the document you want to export has been already reviewed and approved.
+Make sure the document you want to export has already been reviewed and approved.
 
 For how a document reaches Approved status, see [Review process](/reviewing-data/review-process).
 
 ## Single export or batch export
 
-Byron allows you to perform a **single-document export** or **multi-document batch.**
+Byron supports both **single-document exports** and **multi-document batches**.
 
-- **Single-document export**. Use this when you've just approved a single document — a late-arriving K-1, a corrected 1099 — and want to ship it by itself without waiting for the rest of the filing.
-- **Multi-document batch**. Common case at the end of a filing. You've approved the full client package — the W-2s, 1099s, K-1s, whatever else came in — and you send them all at once. You pick the scope by choosing which documents go into the batch at export time.
+- **Single-document export.** Use this when you've just approved a single document — a late-arriving K-1, a corrected 1099 — and want to ship it by itself without waiting for the rest of the filing.
+- **Multi-document batch.** The common case at the end of a filing. You've approved the full client package — W-2s, 1099s, K-1s, whatever else came in — and you send them all at once. You pick the scope by choosing which documents go into the batch at export time.
 
 ## Creating an export
 
-From the Client's workspace, click **Create an Export**. A dialog opens with three sections that you work through in order.
+From the client's workspace, click **Create an Export**. A dialog opens with three sections that you work through in order.
 
 <Steps>
   <Step title="Step 1: Choose your destination">
-    Pick where the documents should go: Lacerte, CCH Axcess, GoSystem, Excel, or PDF. UltraTax and Drake are Coming soon. 
+    Pick where the documents should go: Lacerte, CCH Axcess, GoSystem, Excel, or PDF.
   </Step>
   <Step title="Step 2: Choose your format">
-    Once a destination is selected, the format section opens. Here you can further pick the format if multiple exist and add Client ID if applicable.
+    Once a destination is selected, the format section opens. Here you pick the format if multiple exist and add the Client ID if applicable.
   </Step>
   <Step title="Step 3: Select your documents">
     The last section lists every Approved document in the filing. Check the ones you want in this batch.
@@ -59,7 +57,7 @@ From the Client's workspace, click **Create an Export**. A dialog opens with thr
 
 ## What travels with the export
 
-Every export carries the same underlying data regardless of destination. The field values that ship are the reviewed, approved ones — not Byron's original extractions before corrections. The tax-software client ID travels with the batch so the data lands on the right return. 
+Every export carries the same underlying data regardless of destination. The field values that ship are the reviewed, approved ones — not Byron's original extractions before corrections. The tax-software client ID travels with the batch so the data lands on the right return.
 
 ## What's next
 
@@ -69,11 +67,11 @@ Every export carries the same underlying data regardless of destination. The fie
   </Card>
 
   <Card title="Export to CCH Axcess" icon="file-export" href="/exporting/cch-axcess">
-    `.dat` file ready to import through Batch Manager.
+    `.dat` file via API or manual import through Batch Manager.
   </Card>
 
   <Card title="Export to GoSystem" icon="file-export" href="/exporting/gosystem">
-    Direct import into Thomson Reuters GoSystem.
+    Excel-based file structured for use within GoSystem.
   </Card>
 
   <Card title="Download as Excel or PDF" icon="download" href="/exporting/external-document">

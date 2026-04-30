@@ -48,7 +48,6 @@
             "group": "Uploading documents",
             "pages": [
               "uploading-documents/uploading-docs",
-              "uploading-documents/from-upload-to-ready-for-review",
               "uploading-documents/supported-formats",
               "uploading-documents/supported-tax-forms"
             ]
@@ -106,7 +105,8 @@
         "tab": "Pages for future deployment / alternative versions",
         "hidden": true,
         "pages": [
-          "untitled-page"
+          "untitled-page",
+          "uploading-documents/from-upload-to-ready-for-review"
         ]
       }
     ]
