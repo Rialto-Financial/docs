@@ -9,13 +9,15 @@ Byron's AI is trained specifically on tax documents. It understands the structur
 
 For K-1s in particular, Byron doesn't stop at the face sheet. It reads the footnotes and pulls out detailed breakouts — Section 199A by activity, state K-1 detail, K-3 data — the kind of information that typically takes a preparer 15–30 minutes to transcribe by hand.
 
-## When you upload documents, Byron performs the following steps:
+## What Byron does on upload
+
+When you upload documents, Byron performs the following steps:
 
 1. **Document splitting:** Multi-page PDFs are automatically split into individual forms
 2. **Classification:** Each document is classified by form type (K-1, W-2, 1099, etc.)
 3. **Data extraction:** AI agents extract relevant data fields from each document
 4. **Validation:** Extracted data is validated against IRS formatting rules
-5. **Ready for review:** Documents enter the review queue with status "Awaiting Review"
+5. **Ready for review:** Documents enter the review queue with status **Ready for Review**
 
 ## Confidence scoring on every field
 
@@ -41,6 +43,3 @@ New to Byron? No prior data needed. You create a new client, upload documents, a
 ## Built for how firms actually work
 
 Multiple team members can work on the same client at the same time. Permissions, approval states, and audit trails are designed for real firm workflows — so the work of a seasonal preparer, a senior reviewer, and a partner all live in one system without stepping on each other.
-
-<CardGroup cols={2}>
-</CardGroup>
