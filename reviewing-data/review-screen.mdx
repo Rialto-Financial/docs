@@ -59,31 +59,32 @@ This page walks through the layout so you know what each part of the screen is f
   Click a field and the PDF panel scrolls and zooms to that spot, with a colored box around the source text. This is how you verify a value without reading the whole form — Byron tells you where it got the number, and you decide whether the number matches. Anchors are covered in detail in [Review process](/reviewing-data/review-process).
 </Accordion>
 
-<Accordion title="Collapsed vs. expanded sections">
-  Sections start collapsed or expanded based on Byron's confidence across the section as a whole.
+<Accordion title="Confidence levels and what gets your attention">
+  Every extracted field has a confidence level: **High** (Byron is confident, you can skim past it) or **Review** (Byron wants a human pass). The screen is organized around that distinction so you can focus on what actually needs you.
 
-  - **Collapsed by default.** When every field in a section landed in the high-confidence bucket and there are no open warnings, the section collapses and shows a **Validated** badge next to the section name and field count. The assumption is that you don't need to look at these — the agent is confident, and nothing is flagged. Click the section header to expand it if you want to verify anyway.
+  ### Sections collapse or expand based on confidence
+
+  Sections start collapsed or expanded depending on Byron's confidence across the section as a whole.
+
+  - **Collapsed by default.** When every field in a section landed in the high-confidence bucket and there are no open warnings, the section collapses and shows a **Validated** badge next to the section name and field count. The assumption is that you don't need to look at these — the agent is confident and nothing is flagged. Click the section header to expand it if you want to verify anyway.
   - **Expanded by default.** Sections with any field in the review bucket, any warning, or any correction open up automatically. The agent is drawing your attention to where it wants a human pass.
 
-  Status chips sit next to each field inside an expanded section. Common ones include:
+  ### Status chips on individual fields
 
-  - `High Confidence` (a plain chip, no action needed)
-  - `Validated` (the agent confirmed this field through inspection)
-  - `Approved` (you've explicitly approved this field)
-  - `Corrected` (you edited this field from Byron's original extraction)
-  - `Warning` (unresolved flags on this field)
+  Inside an expanded section, each field carries a status chip that tells you exactly where it stands:
 
-  See [Understanding confidence scores](/reviewing-data/confidence-scores) for further information on these status chips.
+  - **High Confidence** — a plain chip, no action needed.
+  - **Validated** — the agent confirmed this field through inspection.
+  - **Approved** — you've explicitly approved this field.
+  - **Corrected** — you edited this field from Byron's original extraction.
+  - **Warning** — there's an unresolved flag on this field.
 </Accordion>
 
 ## What's next
 
-<CardGroup cols={2}>
-  <Card title="Review process" icon="circle-check" href="/reviewing-data/review-process">
-    Approve fields, leave comments, filter by status, and read the audit log.
-  </Card>
+<Card title="Review process" icon="circle-check" href="/reviewing-data/review-process">
+  Approve fields, leave comments, filter by status, and read the audit log.
+</Card>
 
-  <Card title="Understanding confidence scores" icon="triangle-exclamation" href="/reviewing-data/confidence-scores">
-    What each score means and how Byron decides to flag a field.
-  </Card>
+<CardGroup cols={2}>
 </CardGroup>

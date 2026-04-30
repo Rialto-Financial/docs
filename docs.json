@@ -56,8 +56,7 @@
             "group": "Reviewing extracted data",
             "pages": [
               "reviewing-data/review-screen",
-              "reviewing-data/review-process",
-              "reviewing-data/confidence-scores"
+              "reviewing-data/review-process"
             ]
           },
           {
