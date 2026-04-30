@@ -102,9 +102,9 @@
         "tab": "Pages for future deployment / alternative versions",
         "hidden": true,
         "pages": [
-          "uploading-documents/from-upload-to-ready-for-review",
-          "untitled-page",
-          "getting-started/org-setup"
+          "future-documents/from-upload-to-ready-for-review",
+          "future-documents/uploading-docs",
+          "future-documents/org-setup"
         ]
       }
     ]
