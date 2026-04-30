@@ -49,7 +49,7 @@ The questions below come from CPAs in onboarding, support conversations, and cus
 
     For context, manual data entry by humans typically achieves 90–97% accuracy, and competing AI solutions typically achieve 75–85%.
 
-    Even at 98–99%, Byron always recommends human review before export. The review workflow is designed to make that quick — high-confidence fields can be skimmed, while lower-confidence fields are surfaced for closer attention. See [Understanding confidence scores](/reviewing-data/confidence-scores) for how Byron decides what to flag.
+    Even at 98–99%, Byron always recommends human review before export. The review workflow is designed to make that quick — high-confidence fields can be skimmed, while lower-confidence fields are surfaced for closer attention. See [Review screen](/reviewing-data/review-screen) for how Byron decides what to flag.
   </Accordion>
 
   <Accordion title="What happens if the agent makes a mistake?">
@@ -119,14 +119,9 @@ The questions below come from CPAs in onboarding, support conversations, and cus
   <Accordion title="Which tax software does Byron integrate with?">
     Direct integrations available today:
 
-    - **CCH Axcess Tax** — `.dat` file ready to import through Batch Manager.
+    - **CCH Axcess Tax** — `.dat` file imported through Return Manager, with a direct API integration available so the file pushes into CCH on its own.
     - **Lacerte Tax** — CSV export for Data Conductor import.
-    - **GoSystem Tax** — Excel workbook for GoSystem Tax RS import.
-
-    Coming soon:
-
-    - **UltraTax CS**
-    - **Drake**
+    - **GoSystem Tax** — Excel-based file structured for use within GoSystem workflows. Unlike Lacerte and CCH Axcess, this is not a direct tax-software import — it's a deliverable you work with inside GoSystem yourself.
 
     File-based options for any tax software:
 
@@ -141,12 +136,14 @@ The questions below come from CPAs in onboarding, support conversations, and cus
   </Accordion>
 
   <Accordion title="How does the CCH Axcess integration work?">
-    The CCH Axcess integration uses a `.dat` file that you import into CCH on your side:
+    The CCH Axcess integration is built around a `.dat` file. There are two ways to get that file into CCH Axcess: through Byron's direct API integration with CCH (no manual file handling), or by downloading the `.dat` file from Byron and importing it through Return Manager yourself. Both methods use the same underlying file — your firm picks whichever fits your setup.
+
+    The setup in Byron is the same either way:
 
     1. In Byron, click **Create an Export** from the client workspace.
     2. Choose **CCH Axcess** as the destination, then choose your format and enter your CCH Client ID.
-    3. Select the approved documents to include and click **Create export**. Byron generates the `.dat` file ready for pickup.
-    4. Import the file into the matching client in CCH Axcess.
+    3. Select the approved documents to include and click **Initiate Export**. Byron generates the `.dat` file.
+    4. If your firm is on the API integration, Byron pushes the file into CCH Axcess on its own. If you're on manual import, download the file and import it into the matching client in CCH Axcess Return Manager.
 
     See [Export to CCH Axcess](/exporting/cch-axcess) for the detailed step-by-step.
   </Accordion>
