@@ -25,7 +25,7 @@
     },
     "tabs": [
       {
-        "tab": "Guide",
+        "tab": "Guide - Personal Tax Agent",
         "pages": [
           {
             "group": "Getting started",
@@ -85,17 +85,18 @@
         ]
       },
       {
+        "tab": "Guide - Business Tax Agent",
+        "pages": [
+          "business-tax/welcome",
+          "business-tax/how-byron-works",
+          "business-tax/supported-tax-document-types"
+        ]
+      },
+      {
         "tab": "FAQ and support",
         "pages": [
           "help/faq",
           "help/contact-support"
-        ]
-      },
-      {
-        "tab": "Changelog",
-        "pages": [
-          "changelog/release-notes",
-          "changelog/upcoming-features"
         ]
       },
       {
