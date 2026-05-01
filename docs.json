@@ -81,6 +81,13 @@
               "security/compliance",
               "security/ai-and-data"
             ]
+          },
+          {
+            "group": "Legal",
+            "pages": [
+              "legal/privacy-policy",
+              "legal/terms"
+            ]
           }
         ]
       },
