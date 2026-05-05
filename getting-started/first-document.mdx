@@ -1,81 +1,56 @@
 ---
 title: "Quick start: your first document"
-description: "The best way to understand Byron is to run one real document through it."
+description: "A high-level walk-through of how a filing moves through Byron — from the document upload to the export back to your tax software."
 ---
 
-This guide takes you from upload to export with a single client document. A W-2 or 1099 is usually fastest for a first try, but any supported form works.
+This page is the big-picture view of how a filing moves through Byron. Each stage links to the page with the full walkthrough, so you can read this end to end first and then dive deeper where it matters.
 
-**Before you start:**
+## Before you start
 
-- One PDF or excel file with a tax document for a client
-- Your Byron account set up — see [Joining your firm on Byron](/getting-started/invited-users) if you haven't yet
+You'll want:
 
-<Steps>
-  <Step title="Step 1: Add a filing" titleSize="h2">
-    Everything in Byron starts with a filing. From your dashboard, click **Add Filing**. You'll be prompted to:
+- Your firm onboarded — see [Setting up your organization](/getting-started/org-setup).
+- Your client base in Byron — see [Setting up your client base](/managing-clients/client-base). If your client isn't there yet, you can create one on the fly.
+- A document for that client — typically a W-2, 1099, or K-1.
 
-    - **Filing type** — for example, Form 1040 - Individual
-    - **Tax year** — the year this filing is for
-    - **Client** — select an existing client, or create a new one by entering their first name, last name, email, and filing status (Single, Married Filing Jointly, or Married Filing Separately)
+## 1. Open or create a filing
 
-    Click **Create Filing** to continue. Byron opens the filing workspace — this is where all the documents, exports, and notes for this filing live.
+Everything in Byron starts with a filing. From your dashboard, click **Add Filing** to set one up — choosing the filing type, tax year, and client. The filing workspace that opens is where every document, comment, and export for this return lives.
 
-    <Tip>
-      If you've already imported prior year data, the client may already exist. Pick them from the existing client list rather than creating a duplicate. See [Setting up your client base](/managing-clients/client-base).
-    </Tip>
-  </Step>
-  <Step title="Step 2: Upload the document" titleSize="h2">
-    In the filing window, drag and drop your PDF anywhere on the page, or click **Upload** and select the file from your computer.
+See [Creating clients](/managing-clients/creating-clients) for the full client and filing setup.
 
-    You don't need to sort, label, or rename anything first. Byron automatically recognizes whether it's a W-2, 1099, K-1, or other supported form and files it in the right place.
+## 2. Upload documents
 
-    <Note>
-      Byron accepts **PDFs and Excel files (.xlsx)** today. If your source is an image, scan, or Word doc, convert it to PDF first. Zip files aren't supported — extract them and upload the individual files instead.
-    </Note>
-  </Step>
-  <Step title="Step 3: Let Byron extract the data" titleSize="h2">
-    After upload, Byron starts processing immediately. Most documents take under a minute; complex K-1s with footnotes and state schedules may take a bit longer. The document's status changes from **Processing** to **Ready for Review** once it's done.
+Drag source documents directly onto the filing — one document or a full client package. Byron auto-classifies each file as a W-2, 1099, K-1, or other supported form and routes it to the right place. You don't need to sort, label, or rename anything in advance.
 
-    While Byron works, it's:
+See [Uploading documents](/uploading-documents/uploading-docs) for the full upload flow and [Supported file formats](/uploading-documents/supported-formats) for what Byron accepts today.
 
-    - Identifying the document type
-    - Pulling every relevant field, including footnotes and supplemental schedules on K-1s
-    - Running validation checks (e.g. year, recipient, reportable amounts)
-    - Scoring how confident it is in each value
+## 3. Byron extracts the data
 
-    <Tip>
-      You don't have to sit and wait. Upload more documents, work on a different filing, or close the tab — Byron keeps processing in the background.
-    </Tip>
-  </Step>
-  <Step title="Step 4: Review the extracted data" titleSize="h2">
-    Click the document when it's ready. Byron opens a **side-by-side view**: the original PDF on the left, the extracted fields on the right.
+Each uploaded document moves to **Processing** while Byron's agent identifies the form type, pulls every relevant field, runs validation checks, and assigns a confidence score to each value. Most documents take under a minute; denser forms like K-1s with footnotes take several minutes. You can keep working in parallel — Byron processes in the background.
 
-    A few things are designed to save you time:
+## 4. Review and approve
 
-    - Sections Byron is confident about **collapse automatically** — you only see what needs your attention
-    - Fields flagged as **Review** are surfaced at the top of the list
-    - Click any field and Byron **anchors** you to the exact spot on the PDF where it pulled that value
+When a document moves to **Ready for Review**, you open it in a side-by-side view: the source PDF on the left, the extracted fields on the right. Sections Byron is confident in collapse automatically; flagged fields surface for your attention. You verify, fix anything that looks wrong, and approve when ready.
 
-    For most W-2s and 1099s, this takes under a minute. For K-1s with many fields, filter by **Review** first to focus on flagged items, then bulk-approve the rest.
+See [The review screen](/reviewing-data/review-screen) and [Review process](/reviewing-data/review-process) for the full review flow.
 
-    Fix anything that looks wrong by clicking the field and typing a new value. When you're satisfied, click **Approve & Next** on the document.
+## 5. Export
 
-    See [The review screen](/reviewing-data/review-screen) for the full walkthrough.
-  </Step>
-  <Step title="Step 5: Export to your tax software" titleSize="h2">
-    Once the document is approved, click **Create an Export** in the top right corner of the filing workspace. Pick your format:
+Once your filing is fully approved, click **Create an Export** to send it back to your tax software. Byron supports direct paths into Lacerte and CCH Axcess, an Excel-based file for GoSystem, and standalone Excel and collated PDF downloads.
 
-    - **Direct to tax software** — Lacerte (CSV) or CCH Axcess (`.dat`)
-    - **GoSystem Excel Export** — an Excel workbook formatted for GoSystem Tax RS import
-    - **Full Workpaper** (Excel) — a comprehensive workbook consolidating all tax data with structured tabs
-    - **Collated PDF** — every document in one file for your working paper
+See [Export overview](/exporting/overview) for the full list of destinations and when to use each one.
 
-    Byron formats the data to match your platform's import requirements. Open the file in your tax software and the fields populate automatically — no manual re-entry.
+## What's next
 
-    See [Export overview](/exporting/overview) for the full list of export options and when to use each one.
-  </Step>
-</Steps>
+That's the complete Byron workflow — upload, extract, review, approve, export. The detail pages linked above go deeper on each stage when you need them.
 
-## You've just run a document end-to-end
+<CardGroup cols={2}>
+  <Card title="Setting up your client base" icon="users" href="/managing-clients/client-base">
+    Bring your full client roster into Byron from your tax software.
+  </Card>
 
-That's the complete Byron workflow. From here, try it at scale — upload a client's whole package at once, or roll forward a prior year client so the matching happens automatically.
+  <Card title="Uploading documents" icon="upload" href="/uploading-documents/uploading-docs">
+    The drag-and-drop flow for adding source documents.
+  </Card>
+</CardGroup>
