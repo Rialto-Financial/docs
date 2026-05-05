@@ -3,11 +3,15 @@ title: "How Byron works for business tax"
 description: "A step-by-step walkthrough of how Byron's agents move a business tax return from client intake through workpapers, forms, and export."
 ---
 
-Byron's business tax tool moves through the lifecycle of a return one stage at a time, with agents handling the work and surfacing each step for your team to review and sign off. This page walks through the full flow, starting from a client that's already been created.
+Byron's business tax tool moves through the lifecycle of a return one stage at a time, with agents handling the work and surfacing each step for your team to review and sign off. This page walks through the full flow.
 
 <AccordionGroup>
-  <Accordion title="1. Intake">
-    The first step is asking the client for what's needed to set up the return. From the client workspace, you send an intake request that asks for:
+  <Accordion title="1. Setup">
+    The first stage depends on whether this is a new client or a returning client.
+
+    **For a returning client (roll forward).** If you worked with the client last year, Byron rolls forward from the prior year baseline. Behind the scenes, Byron reads the prior year work paper and the PDF tax return to derive the starting point for this year's return. The result is an index already populated with key facts (entity information, filing scope, and so on) and an initial document request list built from the same information you needed last year — including data from the prior year tax software file (for example, a CCH `.dat` file) where available.
+
+    **For a new client (intake).** From the client workspace, you send an intake request that asks for:
 
     - Last year's tax return
     - Work papers
@@ -18,11 +22,11 @@ Byron's business tax tool moves through the lifecycle of a return one stage at a
   </Accordion>
 
   <Accordion title="2. Document processing">
-    When the client uploads documents, the agent tab opens and Byron processes each document live. You can see what the agent is doing on each one as it works through the batch.
+    When documents are uploaded — whether through the client upload portal or directly within Byron — the agent tab opens and Byron processes each document live. You can see what the agent is doing on each one as it works through the batch.
   </Accordion>
 
   <Accordion title="3. The index">
-    Once the documents are processed, Byron populates the index — the full scope of what's going to be in the return based on the information received so far. It includes:
+    Once documents are processed, Byron populates the index — the full scope of what's going to be in the return based on the information received so far. It includes:
 
     - **Entity information**
     - **Tax year**
@@ -32,16 +36,22 @@ Byron's business tax tool moves through the lifecycle of a return one stage at a
     - **Other items** relevant to the return
 
     The index is the team's checkpoint that what Byron has assembled matches the scope of the actual return.
+
+    **Editing the index directly.** You can update the index in place if there's something you know needs to be there for this year. For example, if you're expecting a new book-to-tax item this year — say, officer life insurance — you can add it to the index without waiting for it to be inferred from a document.
   </Accordion>
 
   <Accordion title="4. The document manifest">
-    After the index is reviewed, Byron's tax engine identifies the documents still needed for the coming year based on everything it's learned about the client to that point. The list appears in the documents view.
+    Alongside the index, Byron's tax engine produces a list of documents still needed for the coming year, drawing from the prior year work paper, the prior year tax software file, and any roll-forward context for a returning client.
 
-    If the manifest looks right, click **Email client**. Byron's agent picks up the request, drafts the email, and surfaces it in the agent tab. You can preview the full email — including all the items being requested — and send it from there. The status of each requested document updates to **Requested** as the email goes out.
+    **Adding requests manually.** If there's a source document request you want to add that isn't on the list, you can search for the document type and add it manually — it joins the rest of the request list.
+
+    **Sending the request.** When the manifest looks right, click **Email client**. Byron's agent picks up the request, drafts the email — listing every item being requested — and surfaces it in the agent tab for your review. The email also includes a link to the Byron upload portal, where the client can drop in the documents directly. You preview the email and send it from there. The status of each requested document updates to **Requested** as the email goes out.
   </Accordion>
 
-  <Accordion title="5. Processing the new documents">
-    When the client returns the requested documents, Byron processes them the same way — live, in the agent tab, with visibility into where each document is in the pipeline.
+  <Accordion title="5. Processing new documents">
+    When the client returns the requested documents — through the upload portal or otherwise — Byron processes them the same way as the initial batch: live, in the agent tab, with visibility into where each document is in the pipeline.
+
+    **Ad-hoc uploads.** If the client uploads something outside the request list — for example, a forgotten questionnaire — Byron processes it and updates both the index and the document request list to reflect what's now been received.
   </Accordion>
 
   <Accordion title="6. Trial balance">
