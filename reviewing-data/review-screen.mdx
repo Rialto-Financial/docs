@@ -59,6 +59,17 @@ This page walks through the layout so you know what each part of the screen is f
   Click a field and the PDF panel scrolls and zooms to that spot, with a colored box around the source text. This is how you verify a value without reading the whole form — Byron tells you where it got the number, and you decide whether the number matches. Anchors are covered in detail in [Review process](/reviewing-data/review-process).
 </Accordion>
 
+<Accordion title="Excel workpapers (.xlsx)">
+  When the document on the left is an Excel workpaper rather than a PDF, the review screen adapts in a few ways:
+
+  - **Sheet navigation.** Each sheet in the source workbook becomes its own document in the filing, and opening one lands the Excel viewer directly on that sheet — no hunting through tabs to find the one Byron extracted from.
+  - **Summary card at the top of the right panel.** Workpapers carry an agent-written summary (a short narrative of what the sheet contains) and a tax year chip. Both are lifted into a card at the top of the right panel rather than buried in the field tree, so you can read what Byron made of the sheet at a glance.
+  - **A trimmed field tree.** Agent-oriented details — column letters, row ranges, structural navigation hints — are hidden from the human review tree because the sheet itself is right there to read. When the only content on a workpaper is the summary and tax year, the search bar, filter chips, and empty-state message are all suppressed and the card stands on its own.
+  - **A wider Excel preview.** The split between the source pane and the field panel shifts to give the Excel preview about 75% of the screen, since reading a sheet usually wants more horizontal room than reading a single PDF field. The divider between the panels still drags if you want to widen the right side.
+
+  PDFs render exactly as described in the rest of this page — full chrome, even split, every field visible.
+</Accordion>
+
 <Accordion title="Confidence levels and what gets your attention">
   Every extracted field has a confidence level: **High** (Byron is confident, you can skim past it) or **Review** (Byron wants a human pass). The screen is organized around that distinction so you can focus on what actually needs you.
 
