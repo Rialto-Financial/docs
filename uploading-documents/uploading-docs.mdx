@@ -63,6 +63,12 @@ From inside a filing, you can add documents in either of two ways:
   The option to perform automatic uploads via Dropbox and more is underway.
 </Info>
 
+## Password-protected PDFs
+
+Some clients send brokerage statements or 1099s as encrypted PDFs. When Byron detects an encrypted file, the upload tracker flags the row with a lock icon and the message **Password protected — click to unlock**. Click the row to enter the password — Byron decrypts the file in place and continues processing it like any other document. If the password is wrong, the row updates to **Incorrect password — click to try again** so you can retry without re-uploading.
+
+The summary header and minimized tracker also show a **\<n\> file needs unlocking** count so you can spot password-protected files at a glance, even when the tracker is collapsed.
+
 ## If a document fails to upload or process:
 
 1. Check the error message in the document status panel
@@ -71,6 +77,7 @@ From inside a filing, you can add documents in either of two ways:
    - **Unsupported format:** Convert to PDF before uploading
    - **Corrupted file:** Re-scan or re-download the original document
    - **Poor image quality:** Re-scan at higher resolution (300 DPI minimum)
+   - **Password protected:** Click the locked row in the upload tracker and enter the PDF password
 3. Re-upload the corrected document
 
 <Info>
