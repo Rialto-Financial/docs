@@ -61,14 +61,18 @@ Byron's business tax tool moves through the lifecycle of a return one stage at a
   </Accordion>
 
   <Accordion title="7. Workpapers">
-    When you're ready to generate workpapers, Byron's agent builds them in the background. The first cut typically includes:
+    When you're ready to generate workpapers, Byron's agent builds them in the background. For partnership (Form 1065) returns, the workbook follows a consistent structure with an INDEX tab linking to every spine tab, and the first cut typically includes:
 
+    - **Trial balance** — one row per GL account (or per statement line if only BS/P&L is available), with a totals row proving books balance.
+    - **Book adjusting entries** — feeding into the trial balance.
+    - **Schedule L, M-1, and M-2** — book-to-tax tie-outs and capital reconciliations.
+    - **Partner information** — identity, type, and profit/loss/capital percentages for each partner.
+    - **Passthrough K-1 summary** — one column per inbound K-1 with box-line amounts.
+    - **Partner K-1 allocations** — one column per partner with per-line allocations.
     - **Partner capital accounts** — and how those have changed over the year.
-    - **Tax account mappings**
-    - **Carry forwards**
-    - **Roll forwards**
+    - **Tax account mappings**, **carry forwards**, and **roll forwards**.
 
-    Some workpapers may still need to be filled in — they appear blank but in the same structure so it's clear what's needed.
+    Some workpapers may still need to be filled in — they appear blank but in the same structure so it's clear what's needed. Partial builds are marked as `DRAFT` in the index, with each skipped workpaper listing the missing input.
 
     You can sign off on individual workpapers as they're reviewed, and multiple team members can do this in parallel.
   </Accordion>
