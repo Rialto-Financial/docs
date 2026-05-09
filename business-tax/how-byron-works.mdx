@@ -19,10 +19,16 @@ Byron's business tax tool moves through the lifecycle of a return one stage at a
     - A questionnaire
 
     The request goes out to the client and waits for them to upload.
+
+    **Prior-year slot seeded at project creation.** When you create a new 1120, 1120S, or 1065 project, Byron pre-populates the document request list with one prior-year ask: the bundled prior-year workpaper Excel from the prior preparer. The slot includes a short note explaining why the full workbook is needed — Schedule L, M-1, M-2 capital, Schedule K and per-partner K-1 detail, carryovers, and the tax return summary all cross-tie across tabs, so sending the whole file rather than individual sheets keeps those references intact. The Documents tab surfaces this as an **unresolved Prior Year** item until a matching upload arrives.
   </Accordion>
 
   <Accordion title="2. Document processing">
     When documents are uploaded — whether through the client upload portal or directly within Byron — the agent tab opens and Byron processes each document live. You can see what the agent is doing on each one as it works through the batch.
+
+    **Prior-year auto-link.** When a bundled prior-year workpaper Excel comes in, Byron categorizes each tab and the tax-return-summary tab links to the seeded slot. The remaining tabs (Schedule L, M-1, M-2, K and K-1 detail, carryforwards, and so on) land in **Prior Year > Workpapers** as bonus reference. A prior-year filed return PDF routes to **Prior Year > Source Documents**; today there is no slot for it to satisfy.
+
+    **Wrong-year flag.** Byron extracts the tax year from each document and only places it in the **Prior Year** section when its year matches *project year minus one*. A document whose extracted year doesn't match (for example, a stale PY-3 workpaper) is rebucketed into **Other > Workpapers** and the review pane shows a wrong-year banner so reviewers can decide whether to keep it.
   </Accordion>
 
   <Accordion title="3. The index">
