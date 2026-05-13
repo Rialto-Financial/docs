@@ -63,12 +63,31 @@ From inside a filing, you can add documents in either of two ways:
   The option to perform automatic uploads via Dropbox and more is underway.
 </Info>
 
+## Password-protected PDFs
+
+If a PDF is password-protected, Byron flags it in the upload tracker instead of failing silently. The tracker auto-expands and the file's row appears with a Lock icon, a red left border, and the message **Password protected — click to unlock**.
+
+<Steps>
+  <Step title="Click the locked row">
+    Click anywhere on the row (or focus it and press Enter) to open the password dialog.
+  </Step>
+  <Step title="Enter the password">
+    Type the PDF's password and submit. Byron unlocks the file and resumes processing.
+  </Step>
+  <Step title="If the password is wrong">
+    The row stays locked and updates to **Incorrect password — click to try again**. Click the row to reopen the dialog and try again.
+  </Step>
+</Steps>
+
+When a batch contains a mix of locked and successful files, the tracker summary surfaces the actionable count first — for example, **1 needs unlocking, 2 uploaded** — so you know exactly what still needs your attention.
+
 ## If a document fails to upload or process:
 
 1. Check the error message in the document status panel
 2. Common issues and solutions:
    - **File too large:** Compress PDF or split into smaller files
    - **Unsupported format:** Convert to PDF before uploading
+   - **Password-protected PDF:** Click the locked row in the upload tracker and enter the password
    - **Corrupted file:** Re-scan or re-download the original document
    - **Poor image quality:** Re-scan at higher resolution (300 DPI minimum)
 3. Re-upload the corrected document
