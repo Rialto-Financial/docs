@@ -12,19 +12,23 @@ This page walks through the layout so you know what each part of the screen is f
 </Info>
 
 <Accordion title="The PDF panel (left side)">
-  The left half of the screen is a live view of the document Byron processed. The toolbar across the top of the panel gives you everything you need to inspect the source without opening the file elsewhere.
+  The left half of the screen is a live view of the document Byron processed. The toolbar across the top of the panel gives you everything you need to inspect the source — and a handful of workspace controls — without opening the file elsewhere.
 
-  From left to right, the toolbar controls are:
+  The toolbar splits into a **left cluster** for document-level controls and a **right cluster** for navigation, search, and download.
+
+  Left cluster:
+
+  - **Document settings.** A gear button opens or closes the workspace's document-settings side pane. The button takes on a yellow active state while the pane is open.
+  - **View Source.** When the document was extracted from a larger source PDF (for example, a single 1099 pulled out of a brokerage's consolidated statement), this toggle switches between the filtered subset Byron focused on and the full source file. Flip it on when you want surrounding context — instructions on a back page, a cover letter, an appendix — and flip it back off to stay in the pages that matter for the review. It only appears when there's a separate source PDF behind the document.
+  - **Anchor settings.** A yellow pennant button opens a popover with a **Show anchors** toggle and a **When clicking a field** dropdown for choosing between *Scroll into view* and *Jump and zoom* navigation modes. The pennant's fill state mirrors whether anchors are currently on. Anchors are covered in detail in [Review process](/reviewing-data/review-process).
+
+  Right cluster:
 
   - **Page navigation.** For multi-page documents (a K-1 packet, a brokerage 1099 consolidated statement), the page navigator lets you jump between pages.
-  - **Hand / pan tool.** Click and drag to move around a zoomed-in page without changing zoom level. Useful when you're verifying a small number (a basis figure, an EIN) and want to stay zoomed in as you scan the page.
-  - **Zoom in / zoom out.** Zoom up to read fine print — the scans Byron accepts can come in at any resolution, so a coffee-stained faxed 1099 often needs a closer look than a clean digital PDF.
-  - **Fill / fit view.** Switch to fit the page view to zoom out on the file.
-  - **View Source.** Toggle between the filtered subset (just the pages Byron extracted from for this document) and the full source PDF (the original upload in its entirety). Useful when you want to confirm a field against surrounding context that didn't make it into the subset. The button shows an active state while the full source is displayed; click it again to return to the subset.
-  - **Anchor settings.** A yellow pennant button opens a popover with a **Show anchors** toggle and a **When clicking a field** dropdown for choosing between *Scroll into view* and *Jump and zoom* navigation modes. The pennant's fill state mirrors whether anchors are currently on. Anchors are covered in detail in [Review process](/reviewing-data/review-process).
+  - **Zoom in / zoom out / fit view.** Zoom up to read fine print — the scans Byron accepts can come in at any resolution, so a coffee-stained faxed 1099 often needs a closer look than a clean digital PDF — or fit the page to the viewport.
   - **Search.** Type any string to find it in the document text. Matches highlight in place.
-  - **Source toggle.** When the document Byron processed was extracted from a larger source PDF (for example, a single 1099 pulled out of a brokerage's consolidated statement), a toggle in the toolbar lets you switch between the filtered subset of pages Byron focused on and the full source file. Flip it on when you want surrounding context — instructions on a back page, a cover letter, an appendix — and flip it back off to stay in the pages that matter for the review. The toggle only appears when there's a separate source PDF behind the document.
   - **Rotate.** For documents that came in sideways or upside down after scanning.
+  - **Download.** The download button at the rightmost edge of the toolbar saves the source PDF for workpapers, a client email, or a second pair of eyes.
 
   Most of the time you won't touch the toolbar. When Byron flags a field, clicking the field on the right panel auto-scrolls the PDF to the exact spot it came from and frames it in a highlight box. That's the primary way you'll navigate the source. The toolbar is there for the cases where you want to look around on your own.
 </Accordion>
@@ -53,7 +57,7 @@ This page walks through the layout so you know what each part of the screen is f
 
       Your filter choice sticks. Pick `Filled` once and the next document — and the one after a reload — opens on `Filled`. First-time users still land on `All`. Switch back any time by clicking another tab.
 
-      To download the source PDF for your workpapers, a client email, or a second pair of eyes, open the workspace overflow menu (the three-dot menu in the top bar) and pick **Download**. It sits alongside Save and Settings.
+      To download the source PDF for your workpapers, a client email, or a second pair of eyes, use the **download** button at the rightmost edge of the PDF toolbar.
     </Tab>
   </Tabs>
 </Accordion>
