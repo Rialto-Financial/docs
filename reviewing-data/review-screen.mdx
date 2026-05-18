@@ -45,7 +45,7 @@ This page walks through the layout so you know what each part of the screen is f
       Below the action buttons, a row of tabs lets you filter the field list by review status. The counts update as you work through the document:
 
       - **All** — every field Byron extracted.
-      - **Filled** — all fields where Byron returned a value, regardless of confidence.
+      - **Filled** — all fields where Byron returned a value, regardless of confidence. Checkbox fields count as filled whether they're checked or unchecked, and amounts of `0` count too — only fields Byron left genuinely blank are hidden.
       - **High** — fields the confidence model placed in the high-confidence bucket. These are the ones you can usually skim past.
       - **Review** — fields Byron wants you to look at. A zero here means nothing is outstanding.
       - **Corrected** — fields you've edited during this review.
